@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class ListingsFactory extends Factory
+class ListingFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -19,10 +19,10 @@ class ListingsFactory extends Factory
         return [
             'title' => $this->faker->sentence(),
             'tags' => $this->faker->sentence(),
-            'hoster' => $this->faker->copmany(),
-            'email' => $this->faker->copmanyEmail(),
-            'location' => $this->faker->copmany(),
-            'description' => $this->faker->paragraph(5),
+            'hoster' => $this->faker->company(),
+            'email' => $this->faker->companyEmail(),
+            'location' => $this->faker->company(),
+            'description' => $this->faker->paragraph(),
         ];
     }
 }
