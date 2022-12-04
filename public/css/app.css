@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "navbar.css";
+@import "index.css";
+
+
+
+* {
+    /* box-sizing: border-box; */
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
