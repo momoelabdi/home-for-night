@@ -16,10 +16,10 @@ class ListingsController extends Controller
         // var_dump($listing);
     }
 
-    // public function show(Listing $listing){
-    //     return view('listings.show', [
-    //         'listing' => $listing
-    //     ]);
-    // }
+    public function show(Listing $listing){
+        return view('listings.show', [
+            'listing' => $listing
+        ]);
+    }
 
 }
