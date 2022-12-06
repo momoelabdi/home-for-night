@@ -3,8 +3,8 @@
     position: fixed;
     left: 0;
     width: 100%;
-    background-color: rgba(238, 238, 238, 0.989);
+    background-color: #eee;
     padding: 10px;
     bottom: 0;
-    font-variant-caps: all-small-caps;
+    font-variant-caps: titling-caps;
 }

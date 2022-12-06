@@ -2,14 +2,16 @@
 @import "navbar.css";
 @import "index.css";
 @import "footer.css";
+@import "show.css";
 
 
 
 * {
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
+    padding: 0;
     font-family: "Roboto", sans-serif;
 }

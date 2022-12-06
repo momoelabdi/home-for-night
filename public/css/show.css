@@ -1,0 +1,20 @@
+.show-card {
+    width: 100%;
+    min-height: 100%;
+    margin-bottom: 5%;
+}
+
+.show-item {
+    padding: 10px;
+    text-align: center; /* ajust when adding checkings "start" */
+    border-radius: 20px;
+}
+
+.show-item img {
+    width: 60%;
+    opacity: 1;
+    border-radius: 2%;
+}
+.show-card img:hover {
+    opacity: 0.85;
+}

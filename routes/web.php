@@ -17,4 +17,4 @@ use App\Http\Controllers\ListingsController;
 Route::get('/', [ListingsController::class, 'index']);
 
 
-Route::get('/listing/{$item}', [ListingsController::class, 'show']);
+Route::get('/item/{listing}', [ListingsController::class, 'show']);
