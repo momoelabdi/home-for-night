@@ -13,7 +13,6 @@ class ListingsController extends Controller
         return view('listings.index', [
             'listing' => Listing::all(),
         ]);
-        // var_dump($listing);
     }
 
     public function show(Listing $listing)
@@ -33,7 +32,7 @@ class ListingsController extends Controller
         $formField = $request->validate([
             'title' => 'required',
             'tags' => ' required',
-            'hoster' => ['required', Rule::unique('listing', 'hoster')],
+            'hoster' => ['required', Rule::unique('listings', 'hoster') ],
             'logo' => 'required',
             'location' => 'required',
             'description' => 'required',
@@ -48,4 +47,6 @@ class ListingsController extends Controller
         Listing::create($formField);
         return redirect('/')->with('message', 'Your hosting offer was created successfully');
     }
+
+
 }
