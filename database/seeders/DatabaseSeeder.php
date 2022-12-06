@@ -23,7 +23,6 @@ class DatabaseSeeder extends Seeder
         // Listing::create(
         //     [   'user_id' => 2,
         //         'title' => 'Night in the sea side ',
-        //         'title' => 'Night in the sea side ',
         //         'tags' => ' Bad Breakfast and dinner',
         //         'hoster' =>' Jhonson familly',
         //         'email' => 'jhon.doe@email.com',
