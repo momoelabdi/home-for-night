@@ -11,7 +11,7 @@
 
 <body>
     @include('component.navbar')
-    <div class="container">
+    <div class="layout-container">
         @yield('content')
     </div>
     @include('component.footer')

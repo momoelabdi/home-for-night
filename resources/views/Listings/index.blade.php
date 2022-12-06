@@ -1,6 +1,7 @@
   @extends('layout')
 
   @section('content')
+  <div class="container">
       @foreach ($listing as $item)
           <div class="grid-card">
               <div class="house-cards">
@@ -12,4 +13,5 @@
               </div>
           </div>
       @endforeach
+    </div>
   @endsection
