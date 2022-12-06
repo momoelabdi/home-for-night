@@ -7,7 +7,7 @@
                   <img src="{{ $item->logo ? asset('public/' . $item->logo) : asset('./images/home.jpg') }}"
                       alt="Home image" />
                       
-                  <a href="listing/{$item}{{$item->id}}">{{ $item->title }} </a>
+                  <a href="/item/{{$item->id}}">{{ $item->title }} </a>
                   <p>{{ $item->location }} </p>
               </div>
           </div>
