@@ -24,7 +24,7 @@ Route::get('/listing/create', [ListingsController::class, 'create']);
 Route::get('/register', [UserController::class, 'create' ]);
 
 // store creations
-Route::post('/listings', [ListingsController::class, 'store']);
+Route::post('/listings', [ListingsController::class, 'store'])->middleware('auth');
 
 
 // create new user
@@ -34,3 +34,5 @@ Route::post('/users', [UserController::class, 'store']);
 // Show single item  
 Route::get('/item/{listing}', [ListingsController::class, 'show']);
 
+
+//login
