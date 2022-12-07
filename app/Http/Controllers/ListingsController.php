@@ -31,18 +31,20 @@ class ListingsController extends Controller
     {
         $formField = $request->validate([
             'title' => 'required',
-            'tags' => ' required',
-            'hoster' => ['required', Rule::unique('listings', 'hoster') ],
+            'email' => 'required',
+            'tags' => 'required',
+            'hoster' => ['required', Rule::unique('listings', 'hoster')],
             'logo' => 'required',
             'location' => 'required',
-            'description' => 'required',
+            'description' => 'required'
         ]);
-
-        if ($request->hasFile('logo')) {
-            $formField['logo'] = $request->file('logo')->store('images', 'public');
-        }
-
+        
         $formField['user_id'] = auth()->id();
+        // d($formField);
+        if ($request->hasFile('logo')) {
+            $formField['logo'] = $request->file('logo')->store('logos', 'public');
+        }
+        
 
         Listing::create($formField);
         return redirect('/')->with('message', 'Your hosting offer was created successfully');

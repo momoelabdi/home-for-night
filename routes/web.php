@@ -18,19 +18,25 @@ use App\Http\Controllers\UserController;
 Route::get('/', [ListingsController::class, 'index']);
 
 // Show create form
-Route::get('/listing/create', [ListingsController::class, 'create']);
+Route::get('/listing/create', [ListingsController::class, 'create'])->middleware('auth');
+
+// store creations
+Route::post('/listings', [ListingsController::class, 'store'])->middleware('auth');
 
 // show registration form
 Route::get('/register', [UserController::class, 'create' ]);
 
-// store creations
-Route::post('/listings', [ListingsController::class, 'store']);
-
-
 // create new user
-Route::post('/users', [UserController::class, 'store']);
+Route::post('/users', [UserController::class, 'store'])->name('login')->middleware();
 
 
 // Show single item  
 Route::get('/item/{listing}', [ListingsController::class, 'show']);
 
+
+// get login form 
+Route::get('/login', [UserController::class, 'login']);
+
+
+//autenticate user
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
