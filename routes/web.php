@@ -28,11 +28,16 @@ Route::post('/listings', [ListingsController::class, 'store'])->middleware('auth
 
 
 // create new user
-Route::post('/users', [UserController::class, 'store']);
+Route::post('/users', [UserController::class, 'store'])->name('login')->middleware('guest');
 
 
 // Show single item  
 Route::get('/item/{listing}', [ListingsController::class, 'show']);
 
 
-//login
+// get login form 
+Route::get('/login', [UserController::class, 'login']);
+
+
+//autenticate user
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
