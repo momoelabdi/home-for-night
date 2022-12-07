@@ -28,7 +28,7 @@ Route::post('/listings', [ListingsController::class, 'store'])->middleware('auth
 
 
 // create new user
-Route::post('/users', [UserController::class, 'store'])->name('login')->middleware('guest');
+Route::post('/users', [UserController::class, 'store'])->name('login')->middleware();
 
 
 // Show single item  
