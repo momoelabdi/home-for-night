@@ -9,7 +9,7 @@ class Listing extends Model
 {
     use HasFactory;
 
-    // protected $filables = ['title', 'hoster', 'description', 'tags', 'location', 'email'];
+   protected $fillable = ['user_id' ,'title', 'hoster', 'description', 'tags', 'location', 'email'];
 
     public function user() {
         return $this->belongsTo(User::class, 'user_id');

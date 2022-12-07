@@ -50,7 +50,7 @@
             </div>
             <div class="hoster-form">
                 <label>Description</label>
-                <textarea type="text" name="decription" placeholder="Amazing place to be" value="{{ old('decription') }}">
+                <textarea type="text" name="description" placeholder="Amazing place to be">{{ old('decription') }}
                 </textarea>
                 @error('decription')
                     <p class="message"> {{ $message }}</p>

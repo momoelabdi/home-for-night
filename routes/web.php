@@ -18,14 +18,13 @@ use App\Http\Controllers\UserController;
 Route::get('/', [ListingsController::class, 'index']);
 
 // Show create form
-Route::get('/listing/create', [ListingsController::class, 'create']);
-
-// show registration form
-Route::get('/register', [UserController::class, 'create' ]);
+Route::get('/listing/create', [ListingsController::class, 'create'])->middleware('auth');
 
 // store creations
 Route::post('/listings', [ListingsController::class, 'store'])->middleware('auth');
 
+// show registration form
+Route::get('/register', [UserController::class, 'create' ]);
 
 // create new user
 Route::post('/users', [UserController::class, 'store'])->name('login')->middleware();

@@ -5,7 +5,7 @@
           @foreach ($listing as $item)
               <div class="grid-card">
                   <div class="house-cards">
-                      <img src="{{ $item->logo ? asset('public/' . $item->logo) : asset('./images/home.jpg') }}"
+                      <img src="{{ $item->logo ? asset('storage/' . $item->logo) : asset('./images/home.jpg') }}"
                           alt="Home image" />
 
                       <a href="/item/{{ $item->id }}">{{ $item->title }} </a>
