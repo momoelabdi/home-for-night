@@ -11,12 +11,12 @@
 </head>
 
 <body>
-    @include('component.navbar')
+    @include('components.navbar')
     @include('users.login')
     <div class="layout-container">
         @yield('content')
     </div>
-    @include('component.footer')
+    @include('components.footer')
 </body>
 
 </html>
