@@ -1,31 +1,30 @@
-@extends('layout')
 
-@section('content')
-    <div class="register">
-        <form method="POST" action="/users">
+    <div id="register" class="register">
+        <form class="regiter-content animate" method="POST" action="/users">
+            <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
             @csrf
-            <div> <label>Your name</label>
+            <div class="register-container">
+                <label>Your name</label>
                 <input type="text" name="name" placeholder="Name">
-            </div>
-            <div> <label>Your email</label>
+
+                <label>Your email</label>
                 <input type="email" name="email" placeholder="Email">
-                @error('email')       
-                <p class="message"> {{ $message }}</p>
+                @error('email')
+                    <p class="message"> {{ $message }}</p>
                 @enderror
-            </div>
-            <div> <label>Your password</label>
+
+                <label>Your password</label>
                 <input type="password" name="password" placeholder="Password">
-                @error('password')       
-                <p class="message"> {{ $message }}</p>
+                @error('password')
+                    <p class="message"> {{ $message }}</p>
                 @enderror
-            </div>
-            <div> <label>Confirm password</label>
+
+                <label>Confirm password</label>
                 <input type="password" name="password_confirmation" placeholder=" password">
-                @error('password')       
-                <p class="message"> {{ $message }}</p>
+                @error('password')
+                    <p class="message"> {{ $message }}</p>
                 @enderror
-                <input type="submit" value="Submit">
+                <button type="submit" value="Sign in">Sign in</button>
             </div>
         </form>
     </div>
-@endsection

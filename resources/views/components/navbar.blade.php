@@ -14,9 +14,9 @@
                 <button type="submit" ><a>logout</a></button>
             </form>
         @else
-            <a href="/register">sign up</a>
+            <a onclick="document.getElementById('register').style.display='block'"> Sign up</a>
             <a onclick="document.getElementById('login').style.display='block'"> log in</a>
-            <a href="/register">Experience Hosting</a>
+            <a onclick="document.getElementById('register').style.display='block'"> Experience Hosting</a>
         @endauth
     </div>
 </div>
@@ -46,5 +46,9 @@
         if (event.target == auths) {
             auths.style.display = "none";
           }
+        //   const register = document.getElementById('register');
+        //   if (event.target == register) {
+        //     register.style.display = "none";
+        //   }
     }
 </script>

@@ -13,6 +13,7 @@
 <body>
     @include('components.navbar')
     @include('users.login')
+    @include('users.register')
     <div class="layout-container">
         @yield('content')
     </div>

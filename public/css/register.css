@@ -1,37 +1,93 @@
-
 .register {
-    padding: 40px;
-    margin-top: 5%;
-    margin-left: 15%;
-    box-shadow: #50045db7;
-    margin-top: 30px;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    width: 70%;
-    padding: 15px;
-    z-index: 1;
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    padding-top: 70px;
 }
 
-.register input {
+.register-container {
+    
+    padding: 16px;
+}
+
+.regiter-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.register > form {
+    border: 10px solid #f1f1f1;
+    border-radius: 5px;
+}
+
+.register  input {
     width: 100%;
     padding: 12px 20px;
-    border-radius: 4px;
+    margin: 8px 0;
+    display: inline-block;
     border: 1px solid #ccc;
-    margin: 5px 0;
     box-sizing: border-box;
 }
 
-.register  input[type="submit"] {
-    width: 100%;
-    background-color: #4caf50;
+.register button {
+    background-color: #04aa6d;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
-    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.register button:hover {
+    opacity: 0.8;
+}
+
+
+
+.close {
+    left: 205px;
+    font-weight: bold;
+    top: 0;
+    color: #000;
+    font-size: 25px;
+    float: right;
+}
+
+.close:hover,
+.close:focus {
+    color: #605c5c;
     cursor: pointer;
 }
 
-.register label {
-    color: #1f211fd8;
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0);
+    }
+    to {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }

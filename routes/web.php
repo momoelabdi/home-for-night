@@ -23,8 +23,8 @@ Route::get('/listing/create', [ListingsController::class, 'create'])->middleware
 // store creations
 Route::post('/listings', [ListingsController::class, 'store'])->middleware('auth');
 
-// show registration form
-Route::get('/register', [UserController::class, 'create' ]);
+// show registration form 'route  repaced with Model'
+// Route::get('/register', [UserController::class, 'create' ]);
 
 // logout 
 Route::get('/logout', [UserController::class, 'logout'])->middleware('auth');
@@ -37,7 +37,7 @@ Route::post('/users', [UserController::class, 'store'])->name('login')->middlewa
 Route::get('/item/{listing}', [ListingsController::class, 'show']);
 
 
-// get login form 
+// get login form 'route  repaced with Model'
 // Route::get('/login', [UserController::class, 'login']);
 
 
