@@ -12,7 +12,7 @@
                 @enderror
             </div>
             <div class="hoster-form">
-                <label> where you Sleep </label>
+                <label> Where you sleep </label>
                 <input type="text" name="title" placeholder="Jhon Doe familly" value="{{ old('title') }}">
                 @error('title')
                     <p class="message"> {{ $message }}</p>
@@ -55,8 +55,8 @@
                 @error('decription')
                     <p class="message"> {{ $message }}</p>
                 @enderror
+                <input type="submit" value="Submit">
             </div>
-            <input type="submit" value="Submit">
 
 
         </form>
