@@ -7,20 +7,21 @@
         </button>
         <div id="dropNav" class="drop-content">
         @auth
-        <span>{{auth()->user()->name}}
-        <form method="GET" action="/logout">
-            <button type="submit" >logout</button>
-        </form>
-        <a href="/listing/create">Experience Hosting</a>
-        <a href="/listings/manage">Mange</a>            
+        <a>{{auth()->user()->name}}</a>
+            <a href="/listing/create">Experience Hosting</a>
+            <a href="/listing/manage">Mange</a>            
+            <form method="GET" action="/logout">
+                <button type="submit" ><a>logout</a></button>
+            </form>
         @else
-            <a href="/register">sign up</a>
+            <a onclick="document.getElementById('register').style.display='block'"> Sign up</a>
             <a onclick="document.getElementById('login').style.display='block'"> log in</a>
-            <a href="/register">Experience Hosting</a>
+            <a onclick="document.getElementById('register').style.display='block'"> Experience Hosting</a>
         @endauth
-        </div>
     </div>
 </div>
+</div>
+    <span>{{session('message')}}</span>
 
 <script>
     function dropDown() {
@@ -45,5 +46,9 @@
         if (event.target == auths) {
             auths.style.display = "none";
           }
+        //   const register = document.getElementById('register');
+        //   if (event.target == register) {
+        //     register.style.display = "none";
+        //   }
     }
 </script>

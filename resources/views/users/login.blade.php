@@ -10,9 +10,14 @@
             <div class="form-container"> 
                 <label>Your Email</label>
                 <input type="text" name="email">
-                
+                @error('email')
+                    <p class="message"> {{ $message }} </p>
+                @enderror
                 <label>Your Password</label>
                 <input type="password" name="password">
+                @error('password')
+                    <p class="message"> {{ $message }} </p>
+                @enderror
                 <button type="submit" value="Log in">Login</button>
                 <label>
                     <input type="checkbox" checked="checked" name="remember"> Remember me

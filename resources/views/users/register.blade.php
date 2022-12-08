@@ -1,22 +1,30 @@
-@extends('layout')
 
-@section('content')
-    <div class="register">
-        <form method="POST" action="/users">
+    <div id="register" class="register">
+        <form class="regiter-content animate" method="POST" action="/users">
+            <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
             @csrf
-            <div> <label>Your name</label>
+            <div class="register-container">
+                <label>Your name</label>
                 <input type="text" name="name" placeholder="Name">
-            </div>
-            <div> <label>Your email</label>
+
+                <label>Your email</label>
                 <input type="email" name="email" placeholder="Email">
-            </div>
-            <div> <label>Your password</label>
+                @error('email')
+                    <p class="message"> {{ $message }}</p>
+                @enderror
+
+                <label>Your password</label>
                 <input type="password" name="password" placeholder="Password">
-            </div>
-            <div> <label>Confirm password</label>
+                @error('password')
+                    <p class="message"> {{ $message }}</p>
+                @enderror
+
+                <label>Confirm password</label>
                 <input type="password" name="password_confirmation" placeholder=" password">
-                <input type="submit" value="Submit">
+                @error('password')
+                    <p class="message"> {{ $message }}</p>
+                @enderror
+                <button type="submit" value="Sign in">Sign in</button>
             </div>
         </form>
     </div>
-@endsection
