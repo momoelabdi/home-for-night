@@ -1,22 +1,22 @@
 @extends('layout')
 
 @section('content')
-    <form method="POST" action="/users">
-        @csrf
-        <div> <label>Your Name</label>
-            <input type="text" name="name">
-        </div>
-        <div> <label>Your Email</label>
-            <input type="email" name="email">
-        </div>
-        <div> <label>Your Password</label>
-            <input type="password" name="password">
-        </div>
-        <div> <label>Confirm Password</label>
-            <input type="password" name="password_confirmation">
-            <input type="submit" value="Submit">
-
-        </div>
-
-    </form>
+    <div class="register">
+        <form method="POST" action="/users">
+            @csrf
+            <div> <label>Your name</label>
+                <input type="text" name="name" placeholder="Name">
+            </div>
+            <div> <label>Your email</label>
+                <input type="email" name="email" placeholder="Email">
+            </div>
+            <div> <label>Your password</label>
+                <input type="password" name="password" placeholder="Password">
+            </div>
+            <div> <label>Confirm password</label>
+                <input type="password" name="password_confirmation" placeholder=" password">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
 @endsection

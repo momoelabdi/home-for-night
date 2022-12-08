@@ -35,7 +35,7 @@ Route::get('/item/{listing}', [ListingsController::class, 'show']);
 
 
 // get login form 
-Route::get('/login', [UserController::class, 'login']);
+// Route::get('/login', [UserController::class, 'login']);
 
 
 //autenticate user

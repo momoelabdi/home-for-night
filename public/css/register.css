@@ -1,12 +1,10 @@
-.create-form {
+
+.register {
     padding: 40px;
     margin-top: 5%;
     margin-left: 15%;
     box-shadow: #50045db7;
     margin-top: 30px;
-}
-
-.hoster-form {
     border-radius: 5px;
     background-color: #f2f2f2;
     width: 70%;
@@ -14,28 +12,16 @@
     z-index: 1;
 }
 
-.hoster-form label {
-    color: #030303d8;
-}
-::placeholder {
-    text-transform: capitalize;
-}
-
-/* .hoster-form textarea::placeholder {
-    text-transform: capitalize;
-    
-} */
-.hoster-form  input,
-textarea {
+.register input {
     width: 100%;
     padding: 12px 20px;
     border-radius: 4px;
     border: 1px solid #ccc;
-    margin: 5px  0;
+    margin: 5px 0;
     box-sizing: border-box;
 }
 
-.hoster-form input[type="submit"] {
+.register  input[type="submit"] {
     width: 100%;
     background-color: #4caf50;
     color: white;
@@ -46,9 +32,6 @@ textarea {
     cursor: pointer;
 }
 
-.hoster-form input[type="submit"]:hover {
-    background-color: #45a049;
-}
-.message {
-    color: red;
+.register label {
+    color: #1f211fd8;
 }
