@@ -26,6 +26,13 @@ Route::post('/listings', [ListingsController::class, 'store'])->middleware('auth
 // show registration form 'route  repaced with Model'
 // Route::get('/register', [UserController::class, 'create' ]);
 
+
+//show edit form of item
+Route::get('/listing/{listing}/edit', [ListingsController::class, 'edit'])->middleware('auth');
+
+//Update 
+Route::put('/listings/{listing}', [ListingsController::class, 'update'])->middleware('auth');
+
 // logout 
 Route::get('/logout', [UserController::class, 'logout'])->middleware('auth');
 

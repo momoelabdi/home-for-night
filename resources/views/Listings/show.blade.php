@@ -9,7 +9,7 @@
              <h2> Hosted by{{ $item->hoster }} </h2>
              <p>{{ $item->description }} </p>
              <p>{{ $item->tags }} </p>
+             <a href="/listing/{{$item->id}}/edit">edit</a>
          </div>
-
      </div>
  @endsection

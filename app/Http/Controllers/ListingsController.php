@@ -51,4 +51,34 @@ class ListingsController extends Controller
     }
 
 
+    public function edit(Listing $listing)
+    {
+     return view('listings.edit',['listing' => $listing]);   
+    }
+
+    public function update(Request $request, Listing $listing)
+    {
+        // Error page to be customized
+        if($listing->user_id != auth()->id()) {
+            abort(403, 'Unauthorized action');
+        }
+
+        $formField = $request->validate([
+            'title' => 'required',
+            'email' => 'required',
+            'tags' => 'required',
+            'hoster' => ['required'],
+            'logo' => 'required',
+            'location' => 'required',
+            'description' => 'required'
+        ]);
+
+        if ($request->hasFile('logo')) {
+            $formField['logo'] = $request->file('logo')->store('logos', 'public');
+        }
+
+        $listing->update($formField);
+        return back()->with('message', 'Your hosting offer was updated successfully');
+
+    }
 }

@@ -7,7 +7,7 @@
         </button>
         <div id="dropNav" class="drop-content">
         @auth
-        <a>{{auth()->user()->name}}</a>
+        <a href="/" >{{auth()->user()->name}}</a>
             <a href="/listing/create">Experience Hosting</a>
             <a href="/listing/manage">Mange</a>            
             <form method="GET" action="/logout">
