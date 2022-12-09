@@ -44,7 +44,7 @@
             </div>
             <div class="hoster-form">
                 <label> Picture </label>
-                <input type="file" name="logo" placeholder="Clifornia beach 73, steert 32, US"  {{-- value="{{ $listing->logo }}" --}} src="{{ $listing->logo ? asset('storage/' . $listing->logo) : asset('./images/home.jpg') }}" --}}
+                <input type="file" name="logo" placeholder="Clifornia beach 73, steert 32, US" src="{{asset('storage/' . $listing->logo)}}" value="{{ $listing->logo }}"
                     >
                 @error('logo')
                     <p class="message"> {{ $message }}</p>
