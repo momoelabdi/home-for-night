@@ -9,7 +9,7 @@
         @auth
         <a href="/" >{{auth()->user()->name}}</a>
             <a href="/listing/create">Experience Hosting</a>
-            <a href="/listing/manage">Mange</a>            
+            <a href="/listings/manage">Mange</a>            
             <form method="GET" action="/logout">
                 <button type="submit" ><a>logout</a></button>
             </form>
