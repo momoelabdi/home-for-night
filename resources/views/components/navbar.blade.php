@@ -1,5 +1,9 @@
 <div class="navbar">
     <h2>Home For Night</h2>
+    <form class="search-form">
+        <input type="text" name="search" placeholder="Search...">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
     <div class="dropdown">
         <button class="drop navigatin-avatar" onclick="dropDown()">
             <i class="drop fa-light fa fa-bars"></i>
