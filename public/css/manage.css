@@ -1,0 +1,42 @@
+.host-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.host-table td,
+.host-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.host-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.host-table tr:hover {
+    background-color: #ddd;
+}
+
+.host-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #db199e;
+    color: white;
+}
+
+.manage-btn  {
+    background-color: #db2d2dd1;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 25px;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.edit {
+background-color: rgba(0, 0, 255, 0.766);
+}
