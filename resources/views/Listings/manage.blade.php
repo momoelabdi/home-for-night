@@ -2,7 +2,8 @@
 
 @section('content')
 
-    <h1>Hello </h1>
+<div class="manage">
+    <h2>Manage my hostings</h2>
     <table class="host-table">
         @unless($listing->isEmpty())
         <tr>
@@ -29,4 +30,5 @@
             <h3 class="message">No Listings Found</h3>
         @endunless
     </table>
+</div>
 @endsection
