@@ -1,7 +1,7 @@
 <div class="navbar">
     <h2>Home For Night</h2>
     <form class="search-form">
-        <input type="text" name="search" placeholder="Search...">
+        <input type="text" name="search" placeholder="Anywhere . anytime ">
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
     <div class="dropdown">
