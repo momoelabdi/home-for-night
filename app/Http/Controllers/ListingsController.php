@@ -36,30 +36,28 @@ class ListingsController extends Controller
             'hoster' => ['required', Rule::unique('listings', 'hoster')],
             'logo' => 'required',
             'location' => 'required',
-            'description' => 'required'
+            'description' => 'required',
         ]);
-        
+
         $formField['user_id'] = auth()->id();
         // d($formField);
         if ($request->hasFile('logo')) {
             $formField['logo'] = $request->file('logo')->store('logos', 'public');
         }
-        
 
         Listing::create($formField);
         return redirect('/')->with('message', 'Your hosting offer was created successfully');
     }
 
-
     public function edit(Listing $listing)
     {
-     return view('listings.edit',['listing' => $listing]);   
+        return view('listings.edit', ['listing' => $listing]);
     }
 
     public function update(Request $request, Listing $listing)
     {
         // Error page to be customized
-        if($listing->user_id != auth()->id()) {
+        if ($listing->user_id != auth()->id()) {
             abort(403, 'Unauthorized action');
         }
 
@@ -70,7 +68,7 @@ class ListingsController extends Controller
             'hoster' => ['required'],
             'logo' => 'required',
             'location' => 'required',
-            'description' => 'required'
+            'description' => 'required',
         ]);
 
         if ($request->hasFile('logo')) {
@@ -79,6 +77,19 @@ class ListingsController extends Controller
 
         $listing->update($formField);
         return back()->with('message', 'Your hosting offer was updated successfully');
+    }
 
+    public function destroy(Listing $listing)
+    {
+        if ($listing->user_id != auth()->id()) {
+            abort(403, 'Unauthorized Action');
+        }
+        $listing->delete();
+        return redirect('/')->with('message', 'Your hosting offer was deleted successfully');
+
+    }
+
+    public function manage() {
+        return view('listings.manage', ['listing' => auth()->user()->listings()->get()]);
     }
 }

@@ -33,6 +33,14 @@ Route::get('/listing/{listing}/edit', [ListingsController::class, 'edit'])->midd
 //Update 
 Route::put('/listings/{listing}', [ListingsController::class, 'update'])->middleware('auth');
 
+// delete item
+
+Route::delete('/listings/{listing}', [ListingsController::class, 'destroy'])->middleware('auth');
+
+//manage items
+
+Route::get('/listings/manage', [ListingsController::class, 'manage'])->middleware('auth');
+
 // logout 
 Route::get('/logout', [UserController::class, 'logout'])->middleware('auth');
 
