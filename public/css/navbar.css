@@ -1,18 +1,20 @@
 .navbar {
-    display: flex;    
+    display: flex;
     background-color: #eee;
     padding: 10px;
     margin: 0;
     justify-content: space-between;
 }
 
-.navbar h2 {
-    font-weight: 600;
-    font-size: 20px;
-    color: #bd1e59;
-    
+.main-logo{
+    font-weight: 200;
+    opacity: 1;
+    width: 60px;
+    filter: saturate(8);
+    /* background-color: aqua; */
+    padding-top: 12px;
+    transform: rotate(200deg);
 }
-
 
 .dropdown {
     float: right;
@@ -67,39 +69,38 @@
     color: grey;
 }
 
- .search-form {
-    margin:auto;
+.search-form {
+    margin: auto;
     width: min(35%, 255px);
- }
+}
 .search-form input[type="text"] {
-    padding: 10px;
+    padding: 4px 12px;
     font-size: 17px;
-    border: 1px solid grey;
+    border: 1px solid rgba(140, 136, 136, 0.904);
     float: left;
     width: 80%;
     background: #f1f1f1;
     border-right: none; /* Prevent double borders */
+    border-radius: 50px 0px 0px 50px;
 }
 
 .search-form button:hover {
-    background: #0b7dda;
+    background: #252626;
 }
 
-/* .search-form::after {
-    content: "";
-    clear: both;
-    display: table;
-} */
+.search-form input:focus {
+    outline: none;
+}
+
 .search-form button {
     float: left;
     width: 20%;
-    padding: 10px;
-    background: #2196f3;
+    padding: 4px 12px;
+    background: gray;
     color: white;
     font-size: 17px;
     border: 1px solid grey;
-    border-left: none; /* Prevent double borders */
+    border-left: none;  /*Prevent double borders */
     cursor: pointer;
-   
-
+    border-radius: 0px 50px 50px 0px;
 }

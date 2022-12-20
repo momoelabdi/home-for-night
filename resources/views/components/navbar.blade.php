@@ -1,5 +1,5 @@
 <div class="navbar">
-    <h2>Home For Night</h2>
+   <a href="/"><img class="main-logo" src="{{ asset('./images/Non-profit logo.png')}}"/></a>
     <form class="search-form">
         <input type="text" name="search" placeholder="Anywhere . anytime ">
         <button type="submit"><i class="fa fa-search"></i></button>
