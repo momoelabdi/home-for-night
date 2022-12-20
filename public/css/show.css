@@ -1,17 +1,21 @@
 .show-card {
     width: 100%;
     min-height: 100%;
-    margin-bottom: 5%;
+    /* margin-bottom: 5%; */
+    padding: 16px;
 }
 
 .show-item {
+    /* text-align: center; */
+    justify-content: center;
     padding: 10px;
-    text-align: center; /* ajust when adding checkings "start" */
     border-radius: 20px;
+    /* border: 5px solid blue; */
+    background-color: azure;
 }
 
 .show-item img {
-    width: 60%;
+    width: 40%;
     opacity: 1;
     border-radius: 2%;
 }
