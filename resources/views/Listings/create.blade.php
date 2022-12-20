@@ -43,7 +43,7 @@
             </div>
             <div class="hoster-form">
                 <label> Picture </label>
-                <input type="file" name="logo" placeholder="Clifornia beach 73, steert 32, US"
+                <input type="file" name="logo" 
                     value="{{ old('logo') }}">
                 @error('logo')
                     <p class="message"> {{ $message }}</p>
@@ -51,9 +51,9 @@
             </div>
             <div class="hoster-form">
                 <label>Description</label>
-                <textarea type="text" name="description" placeholder="Amazing place to be">{{ old('decription') }}
+                <textarea type="text" placeholder="Description" name="description" > {{ old('description') }}
                 </textarea>
-                @error('decription')
+                @error('description')
                     <p class="message"> {{ $message }}</p>
                 @enderror
                 <input type="submit" value="Submit">
