@@ -6,12 +6,10 @@
     justify-content: space-between;
 }
 
-.main-logo{
-    font-weight: 200;
+.main-logo {
     opacity: 1;
     width: 60px;
     filter: saturate(8);
-    /* background-color: aqua; */
     padding-top: 12px;
     transform: rotate(200deg);
 }
@@ -100,7 +98,7 @@
     color: white;
     font-size: 17px;
     border: 1px solid grey;
-    border-left: none;  /*Prevent double borders */
+    border-left: none; /*Prevent double borders */
     cursor: pointer;
     border-radius: 0px 50px 50px 0px;
 }
