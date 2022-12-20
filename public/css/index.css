@@ -7,6 +7,7 @@
 }
 .grid-card {
     border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.326);
 }
 
 .grid-card a {
@@ -17,13 +18,16 @@
 .grid-card i {
     font-size: 15px;
     color: grey;
-
+    letter-spacing: 10px;
 }
 
 .house-cards {
     border-radius: 10px;
     padding: 10px;
-    /* background-color: rgb(255, 255, 127);c */
+}
+
+.house-cards span {
+    color: grey;
 }
 
 .grid-card:hover {
@@ -33,6 +37,5 @@
 
 .house-cards img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px 10px 0 0;
 }
-
