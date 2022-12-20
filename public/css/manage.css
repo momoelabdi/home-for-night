@@ -28,12 +28,12 @@
 .host-table th {
     padding-top: 12px;
     padding-bottom: 12px;
-    background-color: #db199e;
+    background-color: #020101;
     color: white;
 }
 
 .manage-btn {
-    background-color: #db2d2dd1;
+    background-color: #fb5607;
     border-radius: 5px;
     border: none;
     padding: 10px 25px;
@@ -45,5 +45,5 @@
 }
 
 .edit {
-    background-color: rgba(0, 0, 255, 0.766);
+    background-color: #343a40;
 }
