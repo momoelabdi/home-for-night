@@ -9,7 +9,7 @@
                             alt="Home image" />
                         <h4><i class="fa-thin fa fa-house"></i> {{ $item->hoster }}, {{ $item->title }} </h4>
                         <p><i class="fa-thin fa fa-utensils"></i>   {{ $item->tags }} </p>
-                        <small> <i class="fa-thin fa fa-location-dot"></i> {{ $item->location }} </small>
+                        <span> <i class="fa-thin fa fa-location-dot"></i> {{ $item->location }} </span>
                     </div>
                 </a>
             </div>

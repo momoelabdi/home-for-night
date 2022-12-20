@@ -1,7 +1,8 @@
 @extends('layout')
 
 @section('content')
-    <div class="create-form">
+<div class="create-form">
+        <h1> Join the community and connect with curious people </h1>
         <form method="POST" action="/listings" enctype="multipart/form-data">
             @csrf
             <div class="hoster-form">
