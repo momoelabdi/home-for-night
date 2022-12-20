@@ -1,14 +1,14 @@
-
 @extends('layout')
 
 @section('content')
     <div class="edit-form">
-        <form method="POST" action="/listings/{{$listing->id}}" enctype="multipart/form-data">
+        <h1>Improve my hosting</h1>
+        <form method="POST" action="/listings/{{ $listing->id }}" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="hoster-form">
                 <label> Hoster </label>
-                <input type="text" name="hoster" placeholder="California beach" value="{{ $listing->hoster}}">
+                <input type="text" name="hoster" placeholder="California beach" value="{{ $listing->hoster }}">
                 @error('hoster')
                     <p class="message"> {{ $message }}</p>
                 @enderror
@@ -43,18 +43,19 @@
                 @enderror
             </div>
             <div class="hoster-form">
-                <label> Picture </label>
-                <input type="file" name="logo" placeholder="Clifornia beach 73, steert 32, US" src="{{asset('storage/' . $listing->logo)}}" value="{{ $listing->logo }}"
-                    >
+                <label for="logo"> Picture </label>
+                <input type="file" name="logo">
+                <img src="{{ $listing->logo ? asset('storage/' . $listing->logo) : asset('./images/home.jpg') }}"
+                    alt="" />
                 @error('logo')
                     <p class="message"> {{ $message }}</p>
                 @enderror
             </div>
             <div class="hoster-form">
                 <label>Description</label>
-                <textarea type="text" name="description" placeholder="Amazing place to be">{{ $listing->description }}
+                <textarea type="text" name="description" placeholder="Description">{{ $listing->description }}
                 </textarea>
-                @error('decription')
+                @error('description')
                     <p class="message"> {{ $message }}</p>
                 @enderror
                 <input type="submit" value="Submit">
