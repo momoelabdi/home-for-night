@@ -25,7 +25,6 @@
             </div>
             <div class="form-container">
                 <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
             </div>
         </form>
     </div>
