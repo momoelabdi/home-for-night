@@ -25,7 +25,7 @@
     </div>
 </div>
 </div>
-    <span>{{session('message')}}</span>
+    {{-- <span>{{session('message')}}</span> --}}
 
 <script>
     function dropDown() {

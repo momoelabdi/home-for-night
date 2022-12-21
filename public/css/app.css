@@ -9,8 +9,6 @@
 @import "edit.css";
 @import "manage.css";
 
-
-
 * {
     box-sizing: border-box;
 }
@@ -19,5 +17,16 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
-    /* font-family:  Geneva, Verdana, sans-serif; */
+}
+
+.flash-mesage {
+    position: fixed;
+    width: 50%;
+    padding: 3px ;
+    background-color: #04e763ce;
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+    left: 25%;
+    opacity: 1;
 }

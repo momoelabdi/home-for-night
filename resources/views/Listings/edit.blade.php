@@ -46,7 +46,7 @@
                 <label for="logo"> Picture </label>
                 <input type="file" name="logo">
                 <img src="{{ $listing->logo ? asset('storage/' . $listing->logo) : asset('./images/home.jpg') }}"
-                    alt="" />
+                    alt=" " />
                 @error('logo')
                     <p class="message"> {{ $message }}</p>
                 @enderror

@@ -66,7 +66,7 @@ class ListingsController extends Controller
             'email' => 'required',
             'tags' => 'required',
             'hoster' => ['required'],
-            'logo' => 'required',
+            'logo' => 'required|mimes:jpg,bmp,png|max:500000',
             'location' => 'required',
             'description' => 'required',
         ]);
@@ -76,7 +76,7 @@ class ListingsController extends Controller
         }
 
         $listing->update($formField);
-        return back()->with('message', 'Your hosting offer was updated successfully');
+        return redirect('/')->with('message', 'Your hosting offer was updated successfully'); // Back()
     }
 
     public function destroy(Listing $listing)
@@ -85,7 +85,7 @@ class ListingsController extends Controller
             abort(403, 'Unauthorized Action');
         }
         $listing->delete();
-        return redirect('/')->with('message', 'Your hosting offer was deleted successfully');
+        return redirect('/')->with('message', 'Your hosting offer was deleted successfully'); 
 
     }
 
