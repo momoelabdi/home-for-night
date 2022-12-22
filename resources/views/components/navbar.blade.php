@@ -50,9 +50,9 @@
         if (event.target == auths) {
             auths.style.display = "none";
           }
-        //   const register = document.getElementById('register');
-        //   if (event.target == register) {
-        //     register.style.display = "none";
-        //   }
+          const register = document.getElementById('register');
+          if (event.target == register) {
+            register.style.display = "none";
+          }
     }
 </script>
