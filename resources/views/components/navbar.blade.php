@@ -33,8 +33,6 @@
 
     }
 
-    
-    
     window.onclick = function(event) {
         // dropdown menu
         if (!event.target.matches('.drop')) {
@@ -44,7 +42,7 @@
                 if (openDown.classList.contains('show')) {
                     openDown.classList.remove('show');
                 }
-                
+
             }
         }
         // leave login form 
@@ -52,13 +50,6 @@
         if (event.target == auths) {
             auths.style.display = "none";
         }
-    
-        
-        const validateForm = document.getElementById('message');
-        const p = validateForm.innerText;
-         console.log(p);
-         if (p != null)
-         {auths.style.display ='block';}
 
         //leave Sign in form
         const register = document.getElementById('register');
@@ -66,5 +57,4 @@
             register.style.display = "none";
         }
     }
-    
 </script>
