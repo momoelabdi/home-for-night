@@ -19,12 +19,21 @@
                     <p class="message" id="message"> {{ $message }} </p>
                 @enderror
                 <button type="submit">Login</button>
-                <label>
+                {{-- <label>
                     <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
+                </label> --}}
             </div>
             <div class="form-container">
                 <button id="login-btn" type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+                <a href="/">Cancel</a>
             </div>
         </form>
     </div>
+
+    <script>
+
+        function getLogin(){
+            document.getElementById('login').classList.toggle('show')
+        }
+
+    </script>

@@ -32,6 +32,9 @@
         document.getElementById('dropNav').classList.toggle('show');
 
     }
+
+    
+    
     window.onclick = function(event) {
         // dropdown menu
         if (!event.target.matches('.drop')) {
@@ -45,13 +48,18 @@
             }
         }
         // leave login form 
-        // const auths = document.getElementById('login');
-        // if (event.target == auths) {
-        //     auths.style.display = "none";
-        // }
+        const auths = document.getElementById('login');
+        if (event.target == auths) {
+            auths.style.display = "none";
+        }
+    
         
-        const validateForm = document.getElementsByClassName('message');
-         console.log(validateForm.value)?.toString();
+        const validateForm = document.getElementById('message');
+        const p = validateForm.innerText;
+         console.log(p);
+         if (p != null)
+         {auths.style.display ='block';}
+
         //leave Sign in form
         const register = document.getElementById('register');
         if (event.target == register) {
