@@ -10,12 +10,12 @@
             <label>Your Email</label>
             <input type="text" name="email">
             @error('email')
-                <p id="message" class="message"> {{ $message }} </p>
+                <p id="login-msg" class="message"> {{ $message }} </p>
             @enderror
             <label>Your Password</label>
             <input type="password" name="password">
             @error('password')
-                <p class="message" id="message"> {{ $message }} </p>
+                <p id="login-msg" class="message" > {{ $message }} </p>
             @enderror
             <button type="submit">Login</button>
             {{-- <label>
@@ -30,9 +30,8 @@
 </div>
 
 <script>
-    
-    
-    const validateForm = document.getElementById('message');
+    // keep login form displayed if input throw errors
+    const validateForm = document.getElementById('login-msg');
     const p = validateForm.innerText;
     if (p != null) {
         document.getElementById('login').style.display = 'block';
