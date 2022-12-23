@@ -10,21 +10,29 @@
                 <label>Your email</label>
                 <input type="email" name="email" placeholder="Email">
                 @error('email')
-                    <p class="message"> {{ $message }}</p>
+                    <p id="register-msg" class="message"> {{ $message }}</p>
                 @enderror
 
                 <label>Your password</label>
                 <input type="password" name="password" placeholder="Password">
                 @error('password')
-                    <p class="message"> {{ $message }}</p>
+                    <p id="register-msg" class="message"> {{ $message }}</p>
                 @enderror
 
                 <label>Confirm password</label>
                 <input type="password" name="password_confirmation" placeholder=" password">
                 @error('password')
-                    <p class="message"> {{ $message }}</p>
+                    <p id="register-msg" class="message"> {{ $message }}</p>
                 @enderror
                 <button type="submit" value="Sign in">Sign in</button>
             </div>
         </form>
     </div>
+
+    <script>
+        const validator = document.getElementById('register-msg');
+        const msg = validator.innerText;
+        if (msg != null) {
+            document.getElementById('register').style.display = 'block';
+        }
+    </script>
