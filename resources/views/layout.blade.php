@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
     <title>Home for Night</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" >
-    <script src="//unpkg.com/alpinejs" defer></script>
+    
 </head>
 
 <body>
@@ -21,5 +21,5 @@
     </div>
     @include('components.footer')
 </body>
-
+<script src="//unpkg.com/alpinejs" defer></script>
 </html>

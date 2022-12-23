@@ -27,7 +27,7 @@
                     </tbody>
                 @endforeach
             @else
-                <h3 class="message">No Listings Found</h3>
+                <h3 class="message">No Listings Found!! Create a hosting and connect with travelers</h3>
             @endunless
         </table>
     </div>

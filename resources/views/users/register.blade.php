@@ -30,9 +30,12 @@
     </div>
 
     <script>
+         // keep sign in form displayed if input throw errors
         const validator = document.getElementById('register-msg');
         const msg = validator.innerText;
         if (msg != null) {
             document.getElementById('register').style.display = 'block';
         }
     </script>
+    
+    
