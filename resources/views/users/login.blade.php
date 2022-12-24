@@ -51,28 +51,28 @@
 
 
     // keep login form displayed if input return errors
-    // if (document.getElementById('login-msg') != null) {
-    // document.addEventListener("DOMContentLoaded", function(event) {
-    //     const validateForm = document.getElementById("login-msg");
-    //    const p = validateForm.innerText;
-    //      if (p = null) {
-    //         document.getElementById('login').style.display = 'none' ;
-    //     }else if(p  != null) {
-    //          document.getElementById('login').style.display = 'block';}
-    //        else {
-    //         document.getElementById('login').style.display = 'none';
-    //     }
-    // console.log(event.currentTarget);
-    // });
-    // }
-
-    window.onload = function(event) {
-        if (document.getElementById('login-msg') != null) {
-            document.getElementById('login').style.display = 'block'
-        };
-
-        if (document.getElementById('login-msg') == null) {
+    if (document.getElementById('login-msg') != null) {
+    document.addEventListener("DOMContentLoaded", function(event) {
+        const validateForm = document.getElementById("login-msg");
+       const p = validateForm.innerText;
+         if (event.currentTarget == p) {
+            document.getElementById('login').style.display = 'none' ;
+        }else if(p  != null) {
+             document.getElementById('login').style.display = 'block';}
+           else {
             document.getElementById('login').style.display = 'none';
         }
+    console.log(event.currentTarget);
+    });
     }
+
+    // window.onload = function(event) {
+    //     if (document.getElementById('login-msg') != null) {
+    //         document.getElementById('login').style.display = 'block'
+    //     };
+
+    //     if (document.getElementById('login-msg') == null) {
+    //         document.getElementById('login').style.display = 'none';
+    //     }
+    // }
 </script>
