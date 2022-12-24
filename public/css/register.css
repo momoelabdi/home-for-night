@@ -91,3 +91,9 @@
         transform: scale(1);
     }
 }
+
+.register .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #888;
+}

@@ -11,7 +11,7 @@
     
 </head>
 
-<body>
+<body {{--onload="check(); block()"--}} >
     @include('components.navbar')
     @include('users.login')
     @include('users.register')
