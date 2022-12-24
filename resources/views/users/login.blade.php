@@ -66,13 +66,4 @@
     });
     }
 
-    // window.onload = function(event) {
-    //     if (document.getElementById('login-msg') != null) {
-    //         document.getElementById('login').style.display = 'block'
-    //     };
-
-    //     if (document.getElementById('login-msg') == null) {
-    //         document.getElementById('login').style.display = 'none';
-    //     }
-    // }
 </script>
