@@ -18,9 +18,9 @@
                     <button type="submit"><a>logout</a></button>
                 </form>
             @else
-                <a onclick="document.getElementById('register').style.display='block'"> Sign up</a>
-                <a onclick="document.getElementById('login').style.display='block'"> log in</a>
-                <a onclick="document.getElementById('register').style.display='block'"> Experience Hosting</a>
+                <a onclick="showSignIn()"> Sign up</a>
+                <a onclick="showLogin()"> log in</a>
+                <a onclick="showSignIn()"> Experience Hosting</a>
             @endauth
         </div>
     </div>
@@ -30,7 +30,6 @@
 <script>
     function dropDown() {
         document.getElementById('dropNav').classList.toggle('show');
-
     }
 
     window.onclick = function(event) {
@@ -51,10 +50,15 @@
             auths.style.display = "none";
         }
 
+        
+    
         //leave Sign in form
         const register = document.getElementById('register');
         if (event.target == register) {
             register.style.display = "none";
         }
     }
+
+    
+
 </script>
