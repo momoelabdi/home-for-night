@@ -18,7 +18,7 @@
             @enderror
 
             <label>Your password</label>
-            <input type="password" name="password" placeholder="Password">
+            <input  type="password" name="password" placeholder="Password">
             @error('password')
                 <p id="register-msg" class="message"> {{ $message }}</p>
             @enderror
@@ -28,7 +28,7 @@
             @error('password')
                 <p id="register-msg" class="message"> {{ $message }}</p>
             @enderror
-            <button type="submit" onload="back()">Sign in</button>
+            <button type="submit" onclick="registerErr()" >Sign in</button>
             <button type="button" onclick="hideSignIn()" class="cancelbtn">Cancel</button>
         </div>
     </form>
@@ -43,11 +43,12 @@
         document.getElementById('register').style.display = 'none';
     }
       
-    if (document.getElementById('register-msg') != null) {
-        document.getElementById('register').style.display = 'block';
-    }
-    console.log(document.getElementById('register-msg'));
-       
+    // if (document.getElementById('register-msg') != null) {
+    //     document.getElementById('register').style.display = 'block';
+    // }
+
     
+        
+        
    
 </script>
