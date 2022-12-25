@@ -36,11 +36,11 @@
         document.getElementById('login').style.display = 'none'
     }
 
+    // if(document.getElementById('login-msg') != null) {  
+    //     document.getElementById('login').style.display = 'block';
+    // }else if (document.getElementById('login-msg') == null) {
+    //     document.getElementById('login').style.display = 'none';
+    // }
     
-
-    if(document.getElementById('login-msg') != null) {  
-        document.getElementById('register').style.display = 'none';
-        document.getElementById('login').style.display = 'block';
-    }
 
 </script>

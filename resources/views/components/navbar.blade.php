@@ -60,5 +60,14 @@
     }
 
     
-
+    function registerErr() {
+        const msg = document.getElementById('register-msg');
+        const register =   document.getElementById('register');
+        const login = document.getElementById('login');
+        let mg = msg.innerText;
+            if(mg != null) {register.style.display = 'block'};
+            // if(mg != null){login.style.display = 'none'};
+            // if(mg == null) {register.style.display = 'none'};
+            console.log(mg);
+        }
 </script>
