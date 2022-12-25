@@ -44,9 +44,10 @@
     }
       
     if (document.getElementById('register-msg') != null) {
-        document.getElementById('login').style.display = 'none';
         document.getElementById('register').style.display = 'block';
     }
+    console.log(document.getElementById('register-msg'));
+       
     
    
 </script>

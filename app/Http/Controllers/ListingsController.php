@@ -85,7 +85,7 @@ class ListingsController extends Controller
             abort(403, 'Unauthorized Action');
         }
         $listing->delete();
-        return redirect('/')->with('message', 'Your hosting offer was deleted successfully'); 
+        return redirect('/')->with('message', 'Your hosting was deleted'); 
 
     }
 
