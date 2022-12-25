@@ -52,8 +52,8 @@ Route::post('/users', [UserController::class, 'store'])->name('login')->middlewa
 Route::get('/item/{listing}', [ListingsController::class, 'show']);
 
 
-// get login form 'route  repaced with Model'
-// Route::get('/login', [UserController::class, 'login']);
+// get login form. 'route  replaced with Model'
+// Route::get('/', [UserController::class, 'login']);
 
 
 //autenticate user

@@ -19,7 +19,7 @@
                 </form>
             @else
                 <a onclick="showSignIn()"> Sign up</a>
-                <a onclick="showLogin()"> log in</a>
+                <a  onclick="showLogin()"> log in</a>
                 <a onclick="showSignIn()"> Experience Hosting</a>
             @endauth
         </div>

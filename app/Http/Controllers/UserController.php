@@ -44,7 +44,9 @@ class UserController extends Controller
     
     public function login()
     {
+        
         // return view('users.login'); //
+        
     }
 
     public function authenticate(Request $request) 
