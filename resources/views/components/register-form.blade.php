@@ -1,9 +1,4 @@
- 
-
-
-
-
- <div id="register" class="register">
+<div id="register" class="register" onload="back()">
     <form class="regiter-content animate" method="POST" action="/users">
         <span onclick="hideSignIn()" class="close" title="Close Modal">&times;</span>
         @csrf
@@ -32,7 +27,7 @@
             <button type="button" onclick="hideSignIn()" class="cancelbtn">Cancel</button>
         </div>
     </form>
-</div> 
+</div>
 
 <script>
     function showSignIn() {
@@ -42,11 +37,13 @@
     function hideSignIn() {
         document.getElementById('register').style.display = 'none';
     }
-      
-    if (document.getElementById('register-msg') != null) {
-        document.getElementById('login').style.display = 'none';
-        document.getElementById('register').style.display = 'block';
-    }
+
+    // function back() {
+    //     {
+    //         document.querySelector('#register-msg') != null ? showSignIn() : hideSignIn()
+    //     }
+    // }
+    // back();
+
     
-   
 </script>

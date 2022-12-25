@@ -18,8 +18,8 @@
             @enderror
             <button type="submit">Login</button>
             {{-- <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label> --}}
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label> --}}
         </div>
         <div class="form-container">
             <button id="login-btn" type="button" onclick="hideLogin()" class="cancelbtn">Cancel</button>
@@ -36,11 +36,34 @@
         document.getElementById('login').style.display = 'none'
     }
 
-    
+    // function check() {
 
-    if(document.getElementById('login-msg') != null) {  
-        document.getElementById('register').style.display = 'none';
-        document.getElementById('login').style.display = 'block';
+    //     if (document.querySelector('p[id="login-msg"]:not([register-msg])') == null) {
+    //         hideLogin()
+    //     }
+
+    //     if (document.querySelector('p[id="login-msg"]:not([register-msg])') != null) {
+    //         showLogin()
+    //     }
+
+    // }
+
+
+
+    // keep login form displayed if input return errors
+    if (document.getElementById('login-msg') != null) {
+    document.addEventListener("DOMContentLoaded", function(event) {
+        const validateForm = document.getElementById("login-msg");
+       const p = validateForm.innerText;
+         if (event.currentTarget == p) {
+            document.getElementById('login').style.display = 'none' ;
+        }else if(p  != null) {
+             document.getElementById('login').style.display = 'block';}
+           else {
+            document.getElementById('login').style.display = 'none';
+        }
+    console.log(event.currentTarget);
+    });
     }
 
 </script>
