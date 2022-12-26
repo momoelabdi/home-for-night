@@ -5,6 +5,7 @@
     padding: 15px;
     padding-bottom: 10%;
 }
+
 .grid-card {
     border-radius: 10px;
     background-color: white;
@@ -37,5 +38,15 @@
 
 .house-cards img {
     width: 100%;
-    border-radius: 10px 10px 0 0;
+    border-radius: 6px;
+    max-height: 200px;
+    object-fit: cover;
+    vertical-align: bottom;
+    transition: 1s;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.house-cards img:hover {
+    filter: brightness(75%);
 }

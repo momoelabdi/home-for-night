@@ -15,9 +15,13 @@
 }
 
 .show-item img {
-    width: 40%;
+    width: 60%;
     opacity: 1;
     border-radius: 2%;
+    max-height: 500px;
+    object-fit: cover;
+    vertical-align: bottom;
+    cursor: pointer;
 }
 .show-card img:hover {
     opacity: 0.85;

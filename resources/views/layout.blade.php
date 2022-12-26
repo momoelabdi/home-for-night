@@ -22,6 +22,7 @@
         @yield('content')
     </div>
     <x-footer />
+
 </body>
 <script src="//unpkg.com/alpinejs" defer></script>
 
