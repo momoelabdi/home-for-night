@@ -12,7 +12,7 @@
                 <p id="login-msg" class="message"> {{ $message }} </p>
             @enderror
             <label>Your Password</label>
-            <input type="password" name="password">
+            <input type="password" name="password"  autocomplete="on">
             @error('password')
                 <p id="login-msg" class="message"> {{ $message }} </p>
             @enderror
@@ -36,11 +36,14 @@
         document.getElementById('login').style.display = 'none'
     }
 
-    // if(document.getElementById('login-msg') != null) {  
-    //     document.getElementById('login').style.display = 'block';
-    // }else if (document.getElementById('login-msg') == null) {
-    //     document.getElementById('login').style.display = 'none';
-    // }
+    if(document.getElementById('login-msg') != null) {  
+        document.getElementById('login').style.display = 'block';
+    }else if (document.getElementById('login-msg') == null) {
+        document.getElementById('login').style.display = 'none';
+    }
     
+// SET FOREIGN_KEY_CHECKS=0;
+// DELETE FROM  `home_for_night`.`listings` WHERE `user_id` = '3';
+// SET FOREIGN_KEY_CHECKS=1;
 
 </script>
