@@ -19,20 +19,14 @@
                 </form>
             @else
                 <a onclick="showSignIn()"> Sign up</a>
-                <a  onclick="showLogin()"> log in</a>
+                <a onclick="showLogin()"> log in</a>
                 <a onclick="showSignIn()"> Experience Hosting</a>
             @endauth
         </div>
     </div>
 </div>
-{{-- <span>{{session('message')}}</span> --}}
 
 <script>
-
-
-   
-
-
     function dropDown() {
         document.getElementById('dropNav').classList.toggle('show');
     }
@@ -54,18 +48,12 @@
         if (event.target == auths) {
             auths.style.display = "none";
         }
-
         
-    
         //leave Sign in form
         const register = document.getElementById('register');
-        if (event.target == register ) {
+        if (event.target == register) {
             register.style.display = "none";
         }
-        
+
     }
-    
-    
-     
-    
 </script>
