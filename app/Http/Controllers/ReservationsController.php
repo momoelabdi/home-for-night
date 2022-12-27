@@ -8,4 +8,9 @@ use App\Models\Reservations;
 class ReservationsController extends Controller
 {
     //
+
+    public function create()
+    {
+        return view('reservations.create');
+    }
 }
