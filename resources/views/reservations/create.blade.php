@@ -13,18 +13,20 @@
                 <input type="email" name="email" placeholder="Jhon Doe familly" value="{{ auth()->user()->email }}">
             </div>
             <div class="reservation-form">
+                <label >Start date</label>
+                <input type="date" name="start">
+            </div>
+            <div class="reservation-form">
+                <label >End date</label>
+                <input type="date" name="end">
+            </div>
+            
+            <div class="reservation-form">
                 <label>Message</label>
-                <textarea type="text" placeholder="Description" name="description"> {{ old('description') }}
-            </textarea>
-                @error('description')
-                    <p class="message"> {{ $message }}</p>
-                @enderror
+                <textarea type="text" placeholder="Leave a message" name="message"> {{ old('description') }}
+                </textarea>
                 <input type="submit" value="Confirm">
             </div>
         </form>
-    </div>
-
-
-
     </div>
 @endsection
