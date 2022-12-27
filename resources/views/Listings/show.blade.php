@@ -9,5 +9,10 @@
             {{ $item->description }}</h3>            
              <p>{{ $item->location }} </p>
          </div>
+         @auth         
+         <button><a href="/reservations/create">Resereve</a></button>
+         @else
+         <button onclick="showLogin()">Resereve</button>
+         @endauth
      </div>
  @endsection

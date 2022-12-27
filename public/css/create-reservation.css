@@ -1,0 +1,37 @@
+
+.reservation-form {
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+}
+
+.reservation-form label {
+    color: #030303d8;
+}
+.reservation-form  input, textarea
+{
+   width: 100%;
+   padding: 12px 20px;
+   border-radius: 4px;
+   border: 1px solid #ccc;
+   resize: none;
+}
+
+.reservation-form textarea, input:focus {
+    outline: none;
+}
+.reservation-form input[type="submit"] {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.reservation-form input[type="submit"]:hover {
+    background-color: rgba(0, 0, 0, 0.698);
+}
+/* .reservation-form  */

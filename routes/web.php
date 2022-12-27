@@ -22,7 +22,7 @@ Route::get('/', [ListingsController::class, 'index']);
 Route::get('/listing/create', [ListingsController::class, 'create'])->middleware('auth');
 
 // reservations form
-Route::get('/reservations/create', [ReservationsController::class, 'create']);
+Route::get('/reservations/create', [ReservationsController::class, 'create'])->middleware('auth');
 
 // store creations
 Route::post('/listings', [ListingsController::class, 'store'])->middleware('auth');
