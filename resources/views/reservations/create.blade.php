@@ -1,7 +1,8 @@
-@extends('layout')
-@section('content')
-{{-- {{dd(request()->session()->get('listing_id'));}} --}}
-<h1>You are more than welcome</h1>
+{{-- @extends('layout')
+@section('content') --}}
+{{-- {{dd($listing)}} --}}
+
+{{-- <h1>You are more than welcome</h1>
     <div class="create-form">
         <form method="POST" action="/reservations" enctype="multipart/form-data">
             @csrf
@@ -23,7 +24,7 @@
             </div>
             
             <div class="reservation-form">
-                <Input  type="hidden"  name="listing_id" value="{{$listings->id}}" >
+                <Input  type="hidden"  name="listing_id" value="{{$listing->id}}" >
                 </div>
             <div class="reservation-form">
                 <label>Message</label>
@@ -32,5 +33,5 @@
                 <input type="submit" value="Confirm">
             </div>
         </form>
-    </div>
-@endsection
+    </div> --}}
+{{-- @endsection --}}
