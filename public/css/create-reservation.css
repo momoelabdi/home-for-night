@@ -20,7 +20,7 @@
 .reservation-form textarea, input:focus {
     outline: none;
 }
-.reservation-form input[type="submit"] {
+.reservation-form input[type="button"],[type="submit"] {
     width: 100%;
     background-color: black;
     color: white;
@@ -31,7 +31,7 @@
     cursor: pointer;
 }
 
-.reservation-form input[type="submit"]:hover {
+.reservation-form input[type="button"],[type="submit"]:hover {
     background-color: rgba(0, 0, 0, 0.698);
 }
 /* .reservation-form  */
