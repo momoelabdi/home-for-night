@@ -38,7 +38,7 @@
                      <label>Message</label>
                      <textarea type="text" placeholder="Leave a message" name="message"> {{ old('description') }}
                 </textarea>
-                     <input type="submit" value="Confirm">
+                     <input type="submit" value="Reserve">
                  </div>
              </form>
          </div>
@@ -67,7 +67,7 @@
                      <label>Message</label>
                      <textarea type="text" placeholder="Leave a message">
                 </textarea>
-                     <input onclick="showLogin()" value="Reserve">
+                     <input type="button" onclick="showLogin()" value="Reserve">
                  </div>
              </form>
          </div>
