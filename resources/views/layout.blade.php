@@ -16,9 +16,9 @@
     @include('users.login')
     @include('users.register')
     <div class="layout-container">
-        {{-- <x-login-form />
-        <x-register-form /> --}}
+
         <x-flash-messages />
+        {{-- @yield('login') --}}
         @yield('content')
     </div>
     <x-footer />

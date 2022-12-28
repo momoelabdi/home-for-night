@@ -40,7 +40,6 @@ class ListingsController extends Controller
         ]);
 
         $formField['user_id'] = auth()->id();
-        // d($formField);
         if ($request->hasFile('logo')) {
             $formField['logo'] = $request->file('logo')->store('logos', 'public');
         }

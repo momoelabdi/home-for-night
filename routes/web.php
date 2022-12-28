@@ -24,7 +24,10 @@ Route::get('/listing/create', [ListingsController::class, 'create'])->middleware
 // reservations form
 Route::get('/reservations/create', [ReservationsController::class, 'create'])->middleware('auth');
 
-// store creations
+//store reservations
+Route::post('/reservations', [ReservationsController::class, 'store'])->middleware('auth');
+
+// store listings
 Route::post('/listings', [ListingsController::class, 'store'])->middleware('auth');
 
 // show registration form 'route  repaced with Model'

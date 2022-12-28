@@ -1,3 +1,5 @@
+
+    
 <div id="login" class="login">
     <form class="modal-content animate" method="POST" action="/users/authenticate">
         <span onclick="hideLogin()" class="close" title="Close Modal">&times;</span>
@@ -9,12 +11,12 @@
             <label>Your Email</label>
             <input type="text" name="email">
             @error('email')
-                <p id="login-msg" class="message"> {{ $message }} </p>
+            <p id="login-msg" class="message"> {{ $message }} </p>
             @enderror
             <label>Your Password</label>
             <input type="password" name="password"  autocomplete="on">
             @error('password')
-                <p id="login-msg" class="message"> {{ $message }} </p>
+            <p id="login-msg" class="message"> {{ $message }} </p>
             @enderror
             <button type="submit">Login</button>
             {{-- <label>
@@ -31,7 +33,7 @@
     function showLogin() {
         document.getElementById('login').style.display = 'block'
     }
-
+    
     function hideLogin() {
         document.getElementById('login').style.display = 'none'
     }
@@ -42,8 +44,5 @@
         document.getElementById('login').style.display = 'none';
     }
     
-// SET FOREIGN_KEY_CHECKS=0;
-// DELETE FROM  `home_for_night`.`listings` WHERE `user_id` = '3';
-// SET FOREIGN_KEY_CHECKS=1;
-
 </script>
+
