@@ -21,9 +21,6 @@ Route::get('/', [ListingsController::class, 'index']);
 // Show create form
 Route::get('/listing/create', [ListingsController::class, 'create'])->middleware('auth');
 
-// reservations form
-// Route::get('/reservations/create', [ReservationsController::class, 'create'])->middleware('auth');
-
 //store reservations
 Route::post('/reservations', [ReservationsController::class, 'store'])->middleware('auth');
 
