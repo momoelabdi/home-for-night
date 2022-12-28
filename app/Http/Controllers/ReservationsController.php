@@ -10,12 +10,6 @@ use Session;
 
 class ReservationsController extends Controller
 {
-    // public function create()
-    // {
-       
-    //         return view('reservations.create', [
-    //             'listing' => Listing::find('listig_id')]);
-    // }
     public function store(Request $request)
     {
         $formField = $request->validate([
