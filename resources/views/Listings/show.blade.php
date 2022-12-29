@@ -1,5 +1,6 @@
  @extends('layout')
  @section('content')
+ <div class="show-container">
      <div class="show-card">
          <div class="show-item">
              <h2>{{ $item->title }} </h2>
@@ -10,8 +11,8 @@
          </div>
      </div>
      @auth
-         <h1>You are more than welcome</h1>
-         <div class="create-form">
+     <div class="create-reservation">
+             <h1>You are more than welcome</h1>
              <form method="POST" action="/reservations" enctype="multipart/form-data">
                  @csrf
                  <div class="reservation-form">
@@ -30,7 +31,6 @@
                      <label>End date</label>
                      <input type="date" name="end">
                  </div>
-                 {{-- {{ dd($item->id) }} --}}
                  <div class="reservation-form">
                      <Input type="hidden" name="listing_id" value="{{ $item->id }}">
                  </div>
@@ -43,8 +43,8 @@
              </form>
          </div>
      @else
-         <h1>You are more than welcome</h1>
-         <div class="create-form">
+     <div class="create-reservation">
+             <h1>You are more than welcome</h1>
              <form method="POST" action="/reservations" enctype="multipart/form-data">
                  @csrf
                  <div class="reservation-form">
@@ -72,4 +72,5 @@
              </form>
          </div>
      @endauth
+</div>
  @endsection
