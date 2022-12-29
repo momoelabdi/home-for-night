@@ -1,14 +1,12 @@
 .create-reservation {
-    box-shadow: 4px 8px 8px  hsl(0deg 0% 0% / 0.38);
-    /* border: solid rgb(224, 25, 7) 2px; */
-    border-radius: 10px;
-    margin-top: 100px;
-    background-color: aqua;
+    box-shadow: rgb(0 0 0 / 20%) 0px 6px 16px;
+    border-radius: 12px;
+    margin-top: 30%;
+    max-height: 32em;
 }
 
 .reservation-form {
     border-radius: 5px;
-    width: 100%;
     padding: 10px;
 }
 
