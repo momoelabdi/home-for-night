@@ -1,12 +1,13 @@
 .navbar {
     display: flex;
-    background-color: #eee;
+    background-color: #ffff;
     padding: 10px;
     margin: 0;
     justify-content: space-between;
     position: fixed;
     width: 100%;
     top: 0;
+    border-bottom: solid #d4e6e6 0.5px;
 }
 
 .main-logo {
@@ -26,7 +27,7 @@
     right: 0;
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #ffff;
     border-radius: 10px;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -80,13 +81,12 @@
     border: 1px solid rgba(140, 136, 136, 0.904);
     float: left;
     width: 80%;
-    background: #f1f1f1;
     border-right: none; /* Prevent double borders */
     border-radius: 50px 0px 0px 50px;
 }
 
 .search-form button:hover {
-    background: #252626;
+    background: #6a6d6d;
 }
 
 .search-form input:focus {
