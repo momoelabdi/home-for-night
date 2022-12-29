@@ -10,6 +10,7 @@
 @media screen and (max-width: 600px) {
     .show-container {
         grid-template-columns: 1fr;
+        
     }
 }
 
