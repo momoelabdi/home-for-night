@@ -7,8 +7,6 @@ use Illuminate\Validation\Rule;
 use App\Models\User;
 class UserController extends Controller
 {
-    //
-
     public function create()
     {
         return view('users.register');
@@ -37,30 +35,28 @@ class UserController extends Controller
         auth()->logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        
+
         return redirect('/')->with('message', 'You logged out');
     }
 
-    
     public function login()
     {
-        
         // return view('users.login'); //
-        
     }
 
-    public function authenticate(Request $request) 
+    public function authenticate(Request $request)
     {
         $formFiled = $request->validate([
             'email' => ['email', 'required'],
-            'password' => 'required'
+            'password' => 'required',
         ]);
-        if(auth()->attempt($formFiled)) 
-        {
+        if (auth()->attempt($formFiled)) {
             $request->session()->regenerate();
             return redirect('/')->with('message', 'You logged in');
-        }else {
-            return back()->withErrors(['email' => 'Invalid email or password'])->onlyInput('email');
+        } else {
+            return back()
+                ->withErrors(['email' => 'Invalid email or password'])
+                ->onlyInput('email');
         }
     }
 }

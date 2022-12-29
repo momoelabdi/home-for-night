@@ -24,4 +24,13 @@ class ReservationsController extends Controller
         Reservations::create($formField);
         return redirect('/')->with('message', 'Your reservation was submitted');
     }
+
+    public function getReservation(Reservations $reservation, Request $request, Listing $listing)
+    {
+        // if($reservation->listing_id == $listing->id){
+        //     $reservedListing = $request->get($listing);
+        // }
+
+        return view('reservations.manage', ['reservations' => auth()->user()->reservations()->get()]);
+    }
 }
