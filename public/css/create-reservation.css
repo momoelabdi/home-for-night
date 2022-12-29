@@ -13,16 +13,17 @@
 .reservation-form label {
     color: #030303d8;
 }
-.reservation-form  input, textarea
-{
-   width: 100%;
-   padding: 12px 20px;
-   border-radius: 4px;
-   border: 1px solid #ccc;
-   resize: none;
+.reservation-form input,
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: none;
 }
 
-.reservation-form textarea, input:focus {
+.reservation-form textarea,
+input:focus {
     outline: none;
 }
 .reservation-form [type="submit"] {
@@ -38,4 +39,8 @@
 
 .reservation-form input[type="submit"]:hover {
     background-color: rgba(0, 0, 0, 0.698);
+}
+
+.reservation-form input[type="date"] {
+    font-family: inherit;
 }
