@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Reservations;
 use App\Models\Listing;
-use DB;
-use Session;
+
 
 class ReservationsController extends Controller
 {
