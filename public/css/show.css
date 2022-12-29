@@ -1,18 +1,38 @@
+
+.show-container {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 15px;
+    padding: 15px;
+    padding-bottom: 10%;
+    /* background-color: rgb(193, 202, 13); */
+}
+
+@media screen and (max-width: 600px) {
+    .show-container{
+        grid-template-columns:1fr;
+    }
+  }
+  /* .show-container.create-reservation {
+    color: aqua;
+    border: solid blue 8px;
+  } */
 .show-card {
     width: 100%;
     min-height: 100%;
-    padding: 16px;
+    /* padding: 16px; */
 }
 
 .show-item {
     justify-content: center;
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 20px;
-    background-color: azure;
+    /* border: solid darkgreen 5px; */
+    /* background-color: azure; */
 }
 
 .show-item img {
-    width: 60%;
+    width: 100%;
     opacity: 1;
     border-radius: 2%;
     max-height: 500px;

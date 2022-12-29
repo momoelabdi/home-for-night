@@ -1,3 +1,10 @@
+.create-reservation {
+    box-shadow: 4px 8px 8px  hsl(0deg 0% 0% / 0.38);
+    /* border: solid rgb(224, 25, 7) 2px; */
+    border-radius: 10px;
+    margin-top: 100px;
+    background-color: aqua;
+}
 
 .reservation-form {
     border-radius: 5px;
@@ -20,7 +27,7 @@
 .reservation-form textarea, input:focus {
     outline: none;
 }
-.reservation-form input[type="button"],[type="submit"] {
+.reservation-form [type="submit"] {
     width: 100%;
     background-color: black;
     color: white;
@@ -31,7 +38,6 @@
     cursor: pointer;
 }
 
-.reservation-form input[type="button"],[type="submit"]:hover {
+.reservation-form input[type="submit"]:hover {
     background-color: rgba(0, 0, 0, 0.698);
 }
-/* .reservation-form  */
