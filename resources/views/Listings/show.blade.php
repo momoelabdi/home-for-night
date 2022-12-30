@@ -18,12 +18,12 @@
                      <div class="reservation-form">
                          <label>Name</label>
                          <input type="text" name="user_name" placeholder="California beach"
-                             value="{{ auth()->user()->name }}">
+                             {{-- value="{{ auth()->user()->name }}" --}} >
                      </div>
                      <div class="reservation-form">
                          <label> Email </label>
                          <input type="email" name="user_email" placeholder="Jhon Doe familly"
-                             value="{{ auth()->user()->email }}">
+                             {{-- value="{{ auth()->user()->email }}" --}} >
                      </div>
                      <div class="reservation-form">
                          <label>Start date</label>
