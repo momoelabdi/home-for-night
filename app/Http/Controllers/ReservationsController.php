@@ -22,17 +22,13 @@ class ReservationsController extends Controller
         $formField['user_email'] = $request->input('user_email');  //auth()->user()->email;
         $formField['listing_id'] = $request->input('listing_id');
         Reservations::create($formField);
-        MailTo::$reservation->user_email(new MyReservations())->content('asdasdsd');
+        // MailTo::$reservation->user_email(new MyReservations())->content('asdasdsd');
 
         return redirect('/')->with('message', 'Your reservation was submitted');
     }
 
     public function getReservation(Reservations $reservation, Request $request, Listing $listing)
     {
-        
-        // if($reservation->listing_id == $listing->id){
-        //     $request->$listing->email;
-        // }
         return view('reservations.manage', [
             'reservations' => auth()
             ->user()
