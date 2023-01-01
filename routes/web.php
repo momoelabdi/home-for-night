@@ -26,7 +26,7 @@ Route::post('/reservations', [ReservationsController::class, 'store'])->middlewa
 
 
 //manage
-Route::get('/reservations/getReservation', [ReservationsController::class, 'getReservation'])->middleware('auth');
+Route::get('/reservations/manageReservations', [ReservationsController::class, 'manageReservations'])->middleware('auth');
 
 // store listings
 Route::post('/listings', [ListingsController::class, 'store'])->middleware('auth');

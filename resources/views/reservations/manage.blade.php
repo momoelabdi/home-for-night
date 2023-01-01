@@ -18,6 +18,6 @@
             </style>
         @endforeach
     @else
-        <h3 class="message">No rservations Found!! Create a hosting and connect with travelers</h3>
+        <h3 class="message">No rservations Found!!</h3>
     @endunless
 @endsection

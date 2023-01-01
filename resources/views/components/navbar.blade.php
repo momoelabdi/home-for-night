@@ -14,6 +14,7 @@
                 <a href="/">{{ auth()->user()->name }}</a>
                 <a href="/listing/create">Experience Hosting</a>
                 <a href="/listings/manage">Mange</a>
+                <a href="/reservations/manageReservations">My Reservations</a>
                 <form method="GET" action="/logout">
                     <button type="submit"><a>logout</a></button>
                 </form>

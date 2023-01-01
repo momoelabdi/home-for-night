@@ -27,7 +27,7 @@ class ReservationsController extends Controller
         return redirect('/')->with('message', 'Your reservation was submitted');
     }
 
-    public function getReservation(Reservations $reservation, Request $request, Listing $listing)
+    public function manageReservations(Reservations $reservation, Request $request, Listing $listing)
     {
         return view('reservations.manage', [
             'reservations' => auth()
