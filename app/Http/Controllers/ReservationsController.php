@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Reservations;
 use App\Models\Listing;
-use App\Notifications\MyReservations;
-use DB;
+use Illuminate\Support\Facades\Mail;
+use  \App\Mail\ReservationCompleted;
+
 class ReservationsController extends Controller
 {
     public function store(Request $request, Reservations $reservation)
@@ -22,32 +23,28 @@ class ReservationsController extends Controller
         $formField['user_email'] = $request->input('user_email'); //auth()->user()->email;
         $formField['listing_id'] = $request->input('listing_id');
         Reservations::create($formField);
-        // MailTo::$reservation->user_email(new MyReservations())->content('asdasdsd');
 
+        // $reservation = Reservations::findOrFail($request->reservation_id);
+        Mail::to($request->user())->send(new ReservationCompleted($reservation));
         return redirect('/')->with('message', 'Your reservation was submitted');
     }
 
     public function manage(Request $request, Listing $listing, Reservations $reservations)
     {
-        
-        if ($listing->id == $reservations->listing_id) {
-            dd($request->user());
-        }
- 
-            return view('reservations.manage', [
-                'reservations' => auth()
+        // if ($listing->id == $reservations->listing_id) {
+        //     // dd($request->user());
+        // }
+
+        return view('reservations.manage', [
+            'reservations' => auth()
                 ->user()
                 ->reservations()
                 ->get(),
-            ]);
-            
-            
-            
-        
+        ]);
     }
 
     // public function sendEmail(Request $request, Listing $listing, Reservations $reservations) {
-        
+
     //     if ($listing->id == $reservations->listing_id) {
     //         dd($request->user()->email);
     //     }
