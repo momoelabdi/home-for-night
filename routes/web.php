@@ -67,4 +67,4 @@ Route::get('/item/{listing}', [ListingsController::class, 'show']);
 //autenticate user
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
-Notification::route('mail', 'user_email');
+// Route::get('');
