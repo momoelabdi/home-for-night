@@ -12,6 +12,7 @@
             </div>
             <style>
                 #inf{
+                    background-color: aqua;
                     padding-top: 10%;
                     text-align: center
                 }
