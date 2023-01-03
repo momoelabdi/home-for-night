@@ -1,0 +1,8 @@
+.reservation-card {
+    padding: 10px;
+}
+
+.reserved {
+    border: solid blue 5px;
+    padding: 10%;
+}
