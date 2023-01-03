@@ -33,7 +33,7 @@ class ReservationCompleted extends Mailable
         return new Envelope(
             subject: 'Reservation Completed',
             from : 'momo.laravel@gmail.com',
-            to: 'elabdiafric@gmail.com'
+            //to: 'someoneelse@gmail.com'
         );
     }
 
