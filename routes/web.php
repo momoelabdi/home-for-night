@@ -31,7 +31,7 @@ Route::get('/reservations/manage', [ReservationsController::class, 'manage'])->m
 // store listings
 Route::post('/listings', [ListingsController::class, 'store'])->middleware('auth');
 
-// show registration form 'route  repaced with Model'
+// show registration form 'route  replaced with Model'
 // Route::get('/register', [UserController::class, 'create' ]);
 
 
@@ -67,4 +67,3 @@ Route::get('/item/{listing}', [ListingsController::class, 'show']);
 //autenticate user
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
-// Route::get('');
