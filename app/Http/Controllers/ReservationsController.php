@@ -6,11 +6,12 @@ use Illuminate\Http\Request;
 use App\Models\Reservations;
 use App\Models\Listing;
 use Illuminate\Support\Facades\Mail;
-use  \App\Mail\ReservationCompleted;
+use App\Mail\ReservationCompleted;
+use DB;
 
 class ReservationsController extends Controller
 {
-    public function store(Request $request, Reservations $reservation)
+    public function store(Request $request, Listing $listing, Reservations $reservation)
     {
         $formField = $request->validate([
             'start' => 'required',
@@ -24,17 +25,18 @@ class ReservationsController extends Controller
         $formField['listing_id'] = $request->input('listing_id');
         Reservations::create($formField);
 
-        // $reservation = Reservations::findOrFail($request->reservation_id);
-        Mail::to($request->user())->send(new ReservationCompleted($reservation));
-        return redirect('/')->with('message', 'Your reservation was submitted');
+        $listingId = $request->input('listing_id');
+        $listings = DB::table('listings')
+            ->select('email')
+            ->where('id', '=', $listingId)
+            ->get();
+        Mail::to($request->input('user_email'))->send(new ReservationCompleted($reservation));
+        Mail::to($listings)->send(new ReservationCompleted($listings));
+        return redirect('/reservations/manage')->with('message', 'Your reservation was submitted');
     }
 
-    public function manage(Request $request, Listing $listing, Reservations $reservations)
+    public function manage(Request $request, Reservations $reservations)
     {
-        // if ($listing->id == $reservations->listing_id) {
-        //     // dd($request->user());
-        // }
-
         return view('reservations.manage', [
             'reservations' => auth()
                 ->user()
@@ -42,17 +44,4 @@ class ReservationsController extends Controller
                 ->get(),
         ]);
     }
-
-    // public function sendEmail(Request $request, Listing $listing, Reservations $reservations) {
-
-    //     if ($listing->id == $reservations->listing_id) {
-    //         dd($request->user()->email);
-    //     }
-    //     return view('reservations.manage',[
-    //         'reservations' => auth()
-    //         ->user()
-    //         ->reservations()
-    //         ->get(),
-    //     ]);
-    // }
 }
