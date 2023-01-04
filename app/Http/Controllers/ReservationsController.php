@@ -35,13 +35,14 @@ class ReservationsController extends Controller
         return redirect('/reservations/manage')->with('message', 'Your reservation was submitted');
     }
 
-    public function manage(Request $request, Reservations $reservations)
+    public function manage(Reservations $reservations)
     {
-        return view('reservations.manage', [
+        
+        return view('reservations.manage',[
             'reservations' => auth()
                 ->user()
                 ->reservations()
                 ->get(),
-        ]);
+        ], $listing = Listing::all());
     }
 }
