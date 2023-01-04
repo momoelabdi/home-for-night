@@ -26,23 +26,24 @@ class ReservationsController extends Controller
         Reservations::create($formField);
 
         $listingId = $request->input('listing_id');
-        $listings = DB::table('listings')
+        $listingEmail = DB::table('listings')
             ->select('email')
             ->where('id', '=', $listingId)
             ->get();
         Mail::to($request->input('user_email'))->send(new ReservationCompleted($reservation));
-        Mail::to($listings)->send(new ReservationCompleted($listings));
+        Mail::to($listingEmail)->send(new ReservationCompleted($listingEmail));
         return redirect('/reservations/manage')->with('message', 'Your reservation was submitted');
     }
-
     public function manage(Reservations $reservations)
     {
-        
-        return view('reservations.manage',[
+        $listings = Listing::get();
+        // $reservations = collect($reservations)->groupBy('listing_id');
+        // dd($reservations);
+        return view('reservations.manage', [
             'reservations' => auth()
                 ->user()
                 ->reservations()
                 ->get(),
-        ], $listing = Listing::all());
+        ])->with('listings', $listings);
     }
 }
