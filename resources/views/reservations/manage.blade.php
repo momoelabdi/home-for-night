@@ -10,12 +10,12 @@
                             @if ($reserved->listing_id == $listing->id)
                                 <img
                                     src="{{ $listing->logo ? asset('storage/' . $listing->logo) : asset('./images/home.jpg') }}" />
-                                <h4>{{ $listing->location }}</h4>
-                                <h4>hosted by {{ $listing->hoster }}</h4>
+                                <h2>{{ $listing->location }}</h2>
+                                <h3>Hosted by {{ $listing->hoster }}</h3>
                             @endif
                         @endforeach
-                        <h3>from {{ Str::limit($reserved->start, 10) }}</h3>
-                        <h3>to {{ Str::limit($reserved->end, 10) }}</h3>
+                        <h3>From {{ Str::limit($reserved->start, 10) }}</h3>
+                        <h3>To {{ Str::limit($reserved->end, 10) }}</h3>
                     </a>
                     </div>
                 @endforeach
