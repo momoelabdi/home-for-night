@@ -74,4 +74,6 @@ textarea {
 }
 .message {
     color: red;
+    padding-top: 20%;
+    text-align: center;
 }

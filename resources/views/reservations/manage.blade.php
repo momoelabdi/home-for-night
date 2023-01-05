@@ -1,11 +1,13 @@
 @extends('layout')
 @section('content')
     <div class="reservation-card">
+        @unless($reservations->isEmpty())
         @foreach ($reservations as $reserved)
             <div class="reserved">
                 @foreach ($listings as $listing)
                     @if ($reserved->listing_id == $listing->id)
                         <h1>{{ $listing->id }}</h1>
+                        <img src="{{ $listing->logo ? asset('storage/' . $listing->logo) : asset('./images/home.jpg') }}"/>
                         <h1>{{ $listing->location }}</h1>
                         <h1>{{ $listing->description }}</h1>
                         {{-- <h1>{{ $listing->logo }}</h1> --}}
@@ -20,26 +22,8 @@
                 </h2>
             </div>
         @endforeach
-    </div>
-        {{-- @unless($reservations->isEmpty())
-            @foreach ($reservations as $reserved)
-            <div class="reserved">
-                @if (isset($reserved->listing_id))
-                @foreach ($listings as $listing)
-                <p>{{$listing->email}} </p>
-                @endforeach 
-                @endif
-                    <h1>Trips</h1>
-                    <h2>Upcoming reservations</h2>
-                    <h2> Dear {{ $reserved->user_name }} your reservation has been submitted</h2>
-                    <h2>from {{ Str::limit($reserved->start, 10) }}</h2>
-                    <h2>to {{ Str::limit($reserved->end, 10) }}</h2>
-                    <h2>The confirmation has been sent by emmail to the folowing address <address> {{ $reserved->user_email }}                       </address>
-                    </h2>
-                    <p>Enjoy your holiday </p>
-                </div>
-            @endforeach
         @else
-            <h3 class="message">No rservations Found!!</h3>
-        @endunless --}}
+            <h3 style="padding-top:20%" class="message">No reservations Found!!</h3>
+        @endunless
+    </div>
 @endsection
