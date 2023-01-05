@@ -37,8 +37,6 @@ class ReservationsController extends Controller
     public function manage(Reservations $reservations)
     {
         $listings = Listing::get();
-        // $reservations = collect($reservations)->groupBy('listing_id');
-        // dd($reservations);
         return view('reservations.manage', [
             'reservations' => auth()
                 ->user()
