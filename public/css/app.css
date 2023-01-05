@@ -33,4 +33,7 @@ body {
     left: 25%;
     opacity: 1;
 }
-
+.layout-container {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}

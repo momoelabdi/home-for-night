@@ -5,7 +5,6 @@
     box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
     border-radius: 10px;
     margin-top: 5%;
-    margin-bottom: 8%;
     
 }
 
@@ -17,7 +16,7 @@
   }
 
  
-  h1 {
+  .create-form h1 {
     font-size: 25px;
     text-align: center;
     animation: color-change 6s infinite;
