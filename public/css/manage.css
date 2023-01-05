@@ -1,8 +1,10 @@
 .manage {
+    
     padding: 20px;
 }
 .manage h2 {
     color: grey;
+    padding-top: 10%;
 }
 
 .host-table {
