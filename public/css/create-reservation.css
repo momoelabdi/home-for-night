@@ -1,9 +1,9 @@
 .create-reservation {
     box-shadow: rgb(0 0 0 / 20%) 0px 6px 16px;
     border-radius: 12px;
-    margin-top: 30%;
+    margin-top: 90%; /* to be adjusted after the show styling  */
     max-height: 32em;
-
+   
 }
 
 .reservation-form {
