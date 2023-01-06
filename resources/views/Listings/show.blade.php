@@ -2,13 +2,16 @@
  @section('content')
      <div class="show-container">
          <div class="show-card">
+             <h2>{{ $item->title }} </h2>
+             <p>{{ $item->location }} </p>
              <div class="show-item">
-                 <h2>{{ $item->title }} </h2>
                  <img src="{{ $item->logo ? asset('storage/' . $item->logo) : asset('./images/home.jpg') }}"
                      alt="Home image" />
-                 <h3> Get hosted by {{ $item->hoster }}</h3>
-                    <h4> {{ $item->description }}</h4>
-                 <p>{{ $item->location }} </p>
+                 {{-- <div class="host-info"> --}}
+                     <h3> Get hosted by {{ $item->hoster }}</h3>
+                     <h3> {{ $item->description }}</h3>
+                     <h4>{{ $item->hoster }} offers {{ $item->tags }} for free</h4>
+                 {{-- </div> --}}
              </div>
          </div>
          @auth
@@ -17,13 +20,11 @@
                      @csrf
                      <div class="reservation-form">
                          <label>Name</label>
-                         <input type="text" name="user_name" placeholder="California beach"
-                             {{-- value="{{ auth()->user()->name }}" --}} >
+                         <input type="text" name="user_name" placeholder="California beach" {{-- value="{{ auth()->user()->name }}" --}}>
                      </div>
                      <div class="reservation-form">
                          <label> Email </label>
-                         <input type="email" name="user_email" placeholder="Jhon Doe familly"
-                             {{-- value="{{ auth()->user()->email }}" --}} >
+                         <input type="email" name="user_email" placeholder="Jhon Doe familly" {{-- value="{{ auth()->user()->email }}" --}}>
                      </div>
                      <div class="reservation-form">
                          <label>Start date</label>
