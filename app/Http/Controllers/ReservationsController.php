@@ -7,6 +7,7 @@ use App\Models\Reservations;
 use App\Models\Listing;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ReservationCompleted;
+use App\Mail\HostReserved;
 use DB;
 
 class ReservationsController extends Controller
@@ -31,7 +32,7 @@ class ReservationsController extends Controller
             ->where('id', '=', $listingId)
             ->get();
         Mail::to($request->input('user_email'))->send(new ReservationCompleted($reservation));
-        Mail::to($listingEmail)->send(new ReservationCompleted($listingEmail));
+        Mail::to($listingEmail)->send(new HostReserved($listingEmail));
         return redirect('/reservations/manage')->with('message', 'Your reservation was submitted');
     }
     public function manage(Reservations $reservations)
