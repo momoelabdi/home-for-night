@@ -19,6 +19,11 @@
                     <h3>To {{ Str::limit($reserved->end, 10) }}</h3>
                     </a>
                 </div>
+                <form method="POST" action="/reservations/{{ $reserved->id }}">
+                    @csrf
+                    @method('DELETE')
+                    <button class="manage-btn" type="submit">Delete</button>
+                </form>
             @endforeach
         @else
             <h3 class="message">No reservations Found!!</h3>
