@@ -1,9 +1,9 @@
 .create-reservation {
-    box-shadow: rgb(0 0 0 / 20%) 0px 6px 16px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     border-radius: 12px;
-    margin-top: 90%; /* to be adjusted after the show styling  */
-    max-height: 32em;
-   
+    margin-top: 10%;
+    margin-bottom: 10em;
+    float: right;
 }
 
 .reservation-form {
@@ -44,4 +44,11 @@ input:focus {
 
 .reservation-form input[type="date"] {
     font-family: inherit;
+}
+
+@media screen and (max-width: 600px) {
+    .create-reservation  {
+        margin-bottom: 15em;
+        margin-right: 3%;
+    }  
 }

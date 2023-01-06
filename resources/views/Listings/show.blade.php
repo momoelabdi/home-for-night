@@ -12,8 +12,9 @@
                      <h3> {{ $item->description }}</h3>
                      <h4>{{ $item->hoster }} offers {{ $item->tags }} for free</h4>
                  {{-- </div> --}}
-             </div>
-         </div>
+                </div>
+            </div>
+        </div>
          @auth
              <div class="create-reservation">
                  <form method="POST" action="/reservations" enctype="multipart/form-data">
@@ -72,5 +73,4 @@
                  </form>
              </div>
          @endauth
-     </div>
  @endsection
