@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ListingsController;
 use App\Http\Controllers\ReservationsController;
@@ -15,7 +14,7 @@ use App\Http\Controllers\UserController;
 |
 */
 
-// index 
+// index
 Route::get('/', [ListingsController::class, 'index']);
 
 // Show create form
@@ -24,8 +23,10 @@ Route::get('/listing/create', [ListingsController::class, 'create'])->middleware
 //store reservations
 Route::post('/reservations', [ReservationsController::class, 'store'])->middleware('auth');
 
+//delete reservations
+Route::delete('/reservations/{reservation}', [ReservationsController::class, 'destroy'])->middleware('auth');
 
-//manage
+//manage reservations
 Route::get('/reservations/manage', [ReservationsController::class, 'manage'])->middleware('auth');
 
 // store listings
@@ -34,11 +35,10 @@ Route::post('/listings', [ListingsController::class, 'store'])->middleware('auth
 // show registration form 'route  replaced with Model'
 // Route::get('/register', [UserController::class, 'create' ]);
 
-
 //show edit form of item
 Route::get('/listing/{listing}/edit', [ListingsController::class, 'edit'])->middleware('auth');
 
-//Update 
+//Update
 Route::put('/listings/{listing}', [ListingsController::class, 'update'])->middleware('auth');
 
 // delete item
@@ -49,21 +49,19 @@ Route::delete('/listings/{listing}', [ListingsController::class, 'destroy'])->mi
 
 Route::get('/listings/manage', [ListingsController::class, 'manage'])->middleware('auth');
 
-// logout 
+// logout
 Route::get('/logout', [UserController::class, 'logout'])->middleware('auth');
 
 // create new user
-Route::post('/users', [UserController::class, 'store'])->name('login')->middleware();
+Route::post('/users', [UserController::class, 'store'])
+    ->name('login')
+    ->middleware();
 
-
-// Show single item  
+// Show single item
 Route::get('/item/{listing}', [ListingsController::class, 'show']);
-
 
 // get login form. 'route  replaced with Model'
 // Route::get('/', [UserController::class, 'login']);
 
-
 //autenticate user
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
-

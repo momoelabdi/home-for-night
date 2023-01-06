@@ -12,7 +12,7 @@ use DB;
 
 class ReservationsController extends Controller
 {
-    public function store(Request $request, Listing $listing, Reservations $reservation)
+    public function store(Request $request, Reservations $reservation) //, Listing $listing
     {
         $formField = $request->validate([
             'start' => 'required',
@@ -35,7 +35,7 @@ class ReservationsController extends Controller
         Mail::to($listingEmail)->send(new HostReserved($listingEmail));
         return redirect('/reservations/manage')->with('message', 'Your reservation was submitted');
     }
-    public function manage(Reservations $reservations)
+    public function manage()
     {
         $listings = Listing::get();
         return view('reservations.manage', [
@@ -44,5 +44,14 @@ class ReservationsController extends Controller
                 ->reservations()
                 ->get(),
         ])->with('listings', $listings);
+    }
+
+    public function destroy(Reservations $reservation)
+    {
+        if ($reservation->user_id != auth()->id() )
+        { abort(403, 'Unauthorized Action');}
+
+        $reservation->delete();
+        return back()->with('message', 'Your Reservations was deleted');
     }
 }
