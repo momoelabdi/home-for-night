@@ -22,18 +22,30 @@
                      <div class="reservation-form">
                          <label>Name</label>
                          <input type="text" name="user_name" placeholder="California beach" {{-- value="{{ auth()->user()->name }}" --}}>
+                         @error('user_name')
+                         <p class="message"> {{ $message }}</p>
+                     @enderror
                      </div>
                      <div class="reservation-form">
                          <label> Email </label>
                          <input type="email" name="user_email" placeholder="Jhon Doe familly" {{-- value="{{ auth()->user()->email }}" --}}>
+                         @error('email')
+                         <p class="message"> {{ $message }}</p>
+                     @enderror
                      </div>
                      <div class="reservation-form">
                          <label>Start date</label>
                          <input type="date" name="start">
+                         @error('start')
+                         <p class="message"> {{ $message }}</p>
+                     @enderror
                      </div>
                      <div class="reservation-form">
                          <label>End date</label>
                          <input type="date" name="end">
+                         @error('end')
+                         <p class="message"> {{ $message }}</p>
+                     @enderror
                      </div>
                      <Input type="hidden" name="listing_id" value="{{ $item->id }}">
                      <div class="reservation-form">
