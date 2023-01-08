@@ -49,6 +49,7 @@
                     <p class="message"> {{ $message }}</p>
                 @enderror
             </div>
+            <Input type="hidden" name="status" value="Panding...">
             <div class="hoster-form">
                 <label>Description</label>
                 <textarea type="text" placeholder="Description" name="description" > {{ old('description') }}
