@@ -13,6 +13,7 @@
                                     src="{{ $listing->logo ? asset('storage/' . $listing->logo) : asset('./images/home.jpg') }}" />
                                 <h2>{{ $listing->location }}</h2>
                                 <h3>Hosted by {{ $listing->hoster }}</h3>
+                                <h1>Status {{ $listing->status }}</h1>
                             @endif
                     @endforeach
                     <h3>From {{ Str::limit($reserved->start, 10) }}</h3>
