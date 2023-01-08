@@ -6,13 +6,14 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Blade;
 
-
 class ListingsController extends Controller
 {
     public function index()
     {
         return view('listings.index', [
-            'listing' => Listing::latest()->filter(request(['location', 'search']))->paginate(10)
+            'listing' => Listing::latest()
+                ->filter(request(['location', 'search']))
+                ->paginate(10),
         ]);
     }
 
@@ -72,7 +73,6 @@ class ListingsController extends Controller
             'description' => 'required',
         ]);
 
-      
         if ($request->hasFile('logo')) {
             $formField['logo'] = $request->file('logo')->store('logos', 'public');
         }
@@ -87,11 +87,16 @@ class ListingsController extends Controller
             abort(403, 'Unauthorized Action');
         }
         $listing->delete();
-        return redirect('/')->with('message', 'Your hosting was deleted'); 
-
+        return redirect('/')->with('message', 'Your hosting was deleted');
     }
 
-    public function manage() {
-        return view('listings.manage', ['listing' => auth()->user()->listings()->get()]);
+    public function manage()
+    {
+        return view('listings.manage', [
+            'listing' => auth()
+                ->user()
+                ->listings()
+                ->get(),
+        ]);
     }
 }
