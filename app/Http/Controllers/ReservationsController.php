@@ -15,8 +15,8 @@ class ReservationsController extends Controller
     public function store(Request $request, Reservations $reservation) //, Listing $listing
     {
         $formField = $request->validate([
-            'start' => 'required',
-            'end' => 'required',
+            'start' => 'required|date|after:tomorrow',
+            'end' => 'required|date|after:start',
             'message' => 'required',
         ]);
 
