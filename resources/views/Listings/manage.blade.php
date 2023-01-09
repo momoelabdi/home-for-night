@@ -30,16 +30,18 @@
                 <h3 class="message">No Listings Found!! Create a hosting and connect with travelers</h3>
             @endunless
         </table>
-        <h2>Requests for Hosting</h2>
+        <h2>Latests Requests for Hosting</h2>
         <div class="reservation-status">
             @foreach ($listings as $listing)
                 @foreach ($reservations as $reservation)
                     @if ($listing->id === $reservation->listing_id && ($listing->user_id = auth()->id()))
-                        <h2>{{ $reservation->user_name }} has requested your hosting at {{substr($reservation->created_at, 14)}}</h2>
+                        <h2>{{ $reservation->user_name }} has requested your hosting at
+                            {{ substr($reservation->created_at, 14) }}</h2>
                         <img src="{{ $listing->logo ? asset('storage/' . $listing->logo) : asset('./images/home.jpg') }}" />
                         <p><em>"{{ $reservation->message }}"</em></p>
                         <p><em>{{ $reservation->user_name }}</em></p>
-                        <p>From {{ Str::limit($reservation->start, 10, '') }} To  {{ Str::limit($reservation->end, 10, '') }}</p>
+                        <p>From {{ Str::limit($reservation->start, 10, '') }} To
+                            {{ Str::limit($reservation->end, 10, '') }}</p>
                         <form method="POST" action="/listings/{{ $listing->id }}">
                             @csrf
                             @method('PUT')
