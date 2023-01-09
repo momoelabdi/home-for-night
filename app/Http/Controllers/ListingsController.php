@@ -101,12 +101,11 @@ class ListingsController extends Controller
                 ->get(),
         ])->with('reservations', $reservations);
     }
-    public function status(Request $request, $id) {
-
-       $listing = Listing::find($id);
-       $listing['status'] = $request->input('status');
-       $listing->update();
-       return back();
-
+    public function status(Request $request, $id)
+    {
+        $listing = Listing::find($id);
+        $listing['status'] = $request->input('status');
+        $listing->update();
+        return back();
     }
 }
