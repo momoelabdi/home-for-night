@@ -12,8 +12,9 @@ use DB;
 
 class ReservationsController extends Controller
 {
-    public function store(Request $request, Reservations $reservation) //, Listing $listing
+    public function store(Request $request, Reservations $reservation)
     {
+        //, Listing $listing
         $formField = $request->validate([
             'start' => 'required|date|after:tomorrow',
             'end' => 'required|date|after:start',
@@ -48,8 +49,9 @@ class ReservationsController extends Controller
 
     public function destroy(Reservations $reservation)
     {
-        if ($reservation->user_id != auth()->id() )
-        { abort(403, 'Unauthorized Action');}
+        if ($reservation->user_id != auth()->id()) {
+            abort(403, 'Unauthorized Action');
+        }
 
         $reservation->delete();
         return back()->with('message', 'Your Reservations was deleted');
