@@ -5,6 +5,7 @@ use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Blade;
+use App\Models\Reservations;
 
 class ListingsController extends Controller
 {
@@ -92,11 +93,12 @@ class ListingsController extends Controller
 
     public function manage()
     {
+        $reservations = Reservations::get();
         return view('listings.manage', [
-            'listing' => auth()
+            'listings' => auth()
                 ->user()
                 ->listings()
                 ->get(),
-        ]);
+        ])->with('reservations', $reservations);
     }
 }
