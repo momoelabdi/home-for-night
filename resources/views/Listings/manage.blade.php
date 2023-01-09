@@ -33,12 +33,25 @@
         <h1>My Resrvations</h1>
         @foreach ($listings as $listing)
             @foreach ($reservations as $reservation)
-                @if ($listing->id === $reservation->listing_id && $listing->user_id = auth()->id())
-                    {{$listing->id}}
-                    {{$reservation->user_name}}
-                    {{$reservation->message}}
-                    {{$reservation->start}}
-                    {{$reservation->end}}
+                @if ($listing->id === $reservation->listing_id && ($listing->user_id = auth()->id()))
+                <form method="POST" action="/listings/{{ $listing->id }}">
+                    @csrf
+                    @method('PUT')
+                    <Input type="hidden" name="status" value="Refused X">
+                    <button class="manage-btn" type="submit">Refuse</button>
+                </form>
+                    <div class="reserved">
+                    <img src="{{ $listing->logo ? asset('storage/' . $listing->logo) : asset('./images/home.jpg') }}" />
+                    <p><em>"{{ $reservation->message }}"</em></p>
+                    <p><em>{{ $reservation->user_name }}</em></p>
+                    <p>From {{ Str::limit($reservation->start, 10) }} To {{ Str::limit($reservation->end, 10) }}</p>
+                </div>
+                <form method="POST" action="/listings/{{ $listing->id }}">
+                    @csrf
+                    @method('PUT')
+                    <Input type="hidden" name="status" value="Confirmed √">
+                    <button class="manage-btn" type="submit">Confirm</button>
+                </form> 
                 @endif
             @endforeach
         @endforeach
