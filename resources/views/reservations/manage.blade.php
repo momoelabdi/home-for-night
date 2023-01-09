@@ -13,11 +13,11 @@
                                     src="{{ $listing->logo ? asset('storage/' . $listing->logo) : asset('./images/home.jpg') }}" />
                                 <h2>{{ $listing->location }}</h2>
                                 <h3>Hosted by {{ $listing->hoster }}</h3>
-                                <h1>Status {{ $listing->status }}</h1>
+                                <h3 class="status">Status {{ $listing->status }}</h3>
                             @endif
                     @endforeach
-                    <h3>From {{ Str::limit($reserved->start, 10) }}</h3>
-                    <h3>To {{ Str::limit($reserved->end, 10) }}</h3>
+                    <h3>From {{ Str::limit($reserved->start, 10, '') }}</h3>
+                    <h3>To {{ Str::limit($reserved->end, 10, '') }}</h3>
                     </a>
                 </div>
                 <form method="POST" action="/reservations/{{ $reserved->id }}">
