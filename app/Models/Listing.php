@@ -26,7 +26,7 @@ class Listing extends Model
         }
     }
 
-    //Realition to user
+   
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');
