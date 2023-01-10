@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Blade;
 use App\Models\Reservations;
-
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ReservationResponse;
+use DB;
 class ListingsController extends Controller
 {
     public function index()
@@ -101,11 +103,17 @@ class ListingsController extends Controller
                 ->get(),
         ])->with('reservations', $reservations);
     }
-    public function status(Request $request, $id)
+    public function status(Request $request, $id, Reservations $reservations)
     {
         $listing = Listing::find($id);
         $listing['status'] = $request->input('status');
+
         $listing->update();
+        $reservationEmail = DB::table('reservations')
+            ->select('user_email')
+            ->where('listing_id', '=', $listing->id)
+            ->get();
+        Mail::to($reservationEmail)->send(new ReservationResponse($reservationEmail));
         return back();
     }
 }
