@@ -14,7 +14,7 @@ class ReservationsController extends Controller
 {
     public function store(Request $request, Reservations $reservation)
     {
-        //, Listing $listing
+       
         $formField = $request->validate([
             'start' => 'required|date|after:tomorrow',
             'end' => 'required|date|after:start',
@@ -22,8 +22,8 @@ class ReservationsController extends Controller
         ]);
 
         $formField['user_id'] = auth()->id();
-        $formField['user_name'] = $request->input('user_name'); //auth()->user()->name;
-        $formField['user_email'] = $request->input('user_email'); //auth()->user()->email;
+        $formField['user_name'] = $request->input('user_name'); 
+        $formField['user_email'] = $request->input('user_email');
         $formField['listing_id'] = $request->input('listing_id');
         Reservations::create($formField);
 
@@ -32,6 +32,7 @@ class ReservationsController extends Controller
             ->select('email')
             ->where('id', '=', $listingId)
             ->get();
+            
         Mail::to($request->input('user_email'))->send(new ReservationCompleted($reservation));
         Mail::to($listingEmail)->send(new HostReserved($listingEmail));
         return redirect('/reservations/manage')->with('message', 'Your reservation was submitted');

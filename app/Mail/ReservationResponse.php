@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ReservationCompleted extends Mailable
+class ReservationResponse extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -31,8 +31,8 @@ class ReservationCompleted extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Your home for nighr reservation',
-            from : 'home4night@gmail.com',
+            subject: 'Reservation Response',
+            from: 'home4night@gmail.com',
         );
     }
 
@@ -44,7 +44,7 @@ class ReservationCompleted extends Mailable
     public function content()
     {
         return new Content(
-            view: 'emails.reservation_completed',
+            view: 'emails.reservation_response',
         );
     }
 
