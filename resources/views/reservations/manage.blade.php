@@ -2,8 +2,8 @@
 @section('content')
     <div class="reservation-container">
         <h1>Trips</h1>
+        <h2 class="next-rsv">Upcoming reservations</h2>
         @unless($reservations->isEmpty())
-            <h2 class="next-rsv">Upcoming reservations</h2>
             @foreach ($reservations as $reserved)
                 <div class="reserved">
                     @foreach ($listings as $listing)
