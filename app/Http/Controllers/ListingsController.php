@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 use App\Models\Listing;
+use App\Models\Reservations;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Blade;
-use App\Models\Reservations;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\ReservationResponse;
+use App\Mail\ReservationStatus;
 use DB;
+
 class ListingsController extends Controller
 {
     public function index()
@@ -103,17 +104,24 @@ class ListingsController extends Controller
                 ->get(),
         ])->with('reservations', $reservations);
     }
-    public function status(Request $request, $id, Reservations $reservations)
+
+    public function status(Request $request, $id)
     {
         $listing = Listing::find($id);
         $listing['status'] = $request->input('status');
-
         $listing->update();
+        $listings = Listing::get();
+
+        $listingId = $listing->id;
         $reservationEmail = DB::table('reservations')
             ->select('user_email')
-            ->where('listing_id', '=', $listing->id)
+            ->where('listing_id', '=', $listingId)
             ->get();
-        Mail::to($reservationEmail)->send(new ReservationResponse($reservationEmail));
-        return back();
+
+
+
+        Mail::to($reservationEmail)->send(new ReservationStatus($reservationEmail));
+
+        return redirect('/');
     }
 }

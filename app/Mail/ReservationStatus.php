@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ReservationResponse extends Mailable
+class ReservationStatus extends Mailable
 {
     use Queueable, SerializesModels;
 
