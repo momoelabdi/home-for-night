@@ -31,7 +31,7 @@ class ReservationStatus extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Reservation Response',
+            subject: 'Your home for night reservation',
             from: 'home4night@gmail.com',
         );
     }

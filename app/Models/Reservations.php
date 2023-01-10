@@ -15,4 +15,8 @@ class Reservations extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+    // public function listings()
+    // {
+    //     return $this->belongsTo(Listing::class, 'listing_id');
+    // }
 }

@@ -101,27 +101,18 @@ class ListingsController extends Controller
             'listings' => auth()
                 ->user()
                 ->listings()
-                ->get(),
+                ->get()
         ])->with('reservations', $reservations);
     }
 
-    public function status(Request $request, $id)
+    public function status(Request $request, $id, Reservations $reservations) //Reservations $reservations
     {
         $listing = Listing::find($id);
         $listing['status'] = $request->input('status');
         $listing->update();
-        $listings = Listing::get();
-
         $listingId = $listing->id;
-        $reservationEmail = DB::table('reservations')
-            ->select('user_email')
-            ->where('listing_id', '=', $listingId)
-            ->get();
-
-
-
-        Mail::to($reservationEmail)->send(new ReservationStatus($reservationEmail));
-
-        return redirect('/');
+        $reservationEmail = Reservations::where('listing_id', '=', $listingId)->first();
+        Mail::to( $reservationEmail->user_email)->send(new ReservationStatus());   
+        return back();
     }
 }
