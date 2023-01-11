@@ -68,6 +68,14 @@ textarea {
     cursor: pointer;
 }
 
+.hoster-form select{
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
 .hoster-form input[type="submit"]:hover {
     background-color: rgba(0, 0, 0, 0.698);
 }

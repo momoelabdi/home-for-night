@@ -7,29 +7,34 @@
             @csrf
             <div class="hoster-form">
                 <label> Hoster </label>
-                <input type="text" name="hoster" placeholder="California beach" value="{{ old('hoster') }}">
+                <input type="text" name="hoster" placeholder="Full Name" value="{{ old('hoster') }}">
                 @error('hoster')
                     <p class="message"> {{ $message }}</p>
                 @enderror
             </div>
             <div class="hoster-form">
-                <label> Where you sleep </label>
-                <input type="text" name="title" placeholder="Jhon Doe familly" value="{{ old('title') }}">
+                <label>Location</label>
+                <input type="text" name="title" placeholder="Location" value="{{ old('title') }}">
                 @error('title')
                     <p class="message"> {{ $message }}</p>
                 @enderror
             </div>
             <div class="hoster-form">
-                <label> Location </label>
-                <input type="text" name="location" placeholder="Clifornia beach 73, steert 32, US"
+                <label> Address </label>
+                <input type="text" name="location" placeholder="Full Address"
                     value="{{ old('location') }}">
                 @error('location')
                     <p class="message"> {{ $message }}</p>
                 @enderror
             </div>
             <div class="hoster-form">
-                <label>Meals we offer</label>
-                <input type="text" name="tags" placeholder="Dinner" value="{{ old('tags') }}">
+                <label>Meals </label>
+                <select type="text" name="tags"  value="{{ old('tags') }}">
+                    <option value="Dinner and Breakfast">Dinner and Breakfast</option>
+                    <option value="Dinner">Dinner</option>
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="None">None</option>
+                </select>
                 @error('tags')
                     <p class="message"> {{ $message }}</p>
                 @enderror
@@ -44,7 +49,8 @@
             <div class="hoster-form">
                 <label> Picture </label>
                 <input type="file" name="logo" 
-                    value="{{ old('logo') }}">
+                value="{{ old('logo') }}"
+                    >
                 @error('logo')
                     <p class="message"> {{ $message }}</p>
                 @enderror
