@@ -40,22 +40,22 @@
                         <p><em>"{{ $reservation->message }}"</em></p>
                         <p><em>{{ $reservation->user_name }}</em></p>
                         <p>From {{ Str::limit($reservation->start, 10, '') }} To  {{ Str::limit($reservation->end, 10, '') }}</p>
-                        <form method="POST" action="/listings/{{ $listing->id }}">
+                        <form method="POST" action="/listings/{{ $listing->id }}/status">
                             @csrf
                             @method('PUT')
                             <Input type="hidden" name="status" value="Confirmed √">
                             <button class="confirm-btn" type="submit">Confirm</button>
                         </form>
-                        <form method="POST" action="/listings/{{ $listing->id }}">
+                        <form method="POST" action="/listings/{{ $listing->id }}/status">
                             @csrf
                             @method('PUT')
                             <Input type="hidden" name="status" value="Refused X">
                             <button class="refuse-btn" type="submit">Refuse</button>
                         </form>
-                        @else {<h1 class="message">You have no reservation</h1>}
-                    @endif
-                    
-                @endforeach
+                        {{-- @else <h1 class="message">You have no reservation</h1> --}}
+                        @endif
+                        
+                        @endforeach
             @endforeach
         </div>
     </div>

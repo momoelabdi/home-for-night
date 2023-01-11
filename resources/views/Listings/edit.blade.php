@@ -20,6 +20,7 @@
                     <p class="message"> {{ $message }}</p>
                 @enderror
             </div>
+            <Input type="hidden" name="status" value="Panding...">
             <div class="hoster-form">
                 <label> Location </label>
                 <input type="text" name="location" placeholder="Clifornia beach 73, steert 32, US"

@@ -80,7 +80,7 @@ class ListingsController extends Controller
         if ($request->hasFile('logo')) {
             $formField['logo'] = $request->file('logo')->store('logos', 'public');
         }
-
+        $formField['status'] = $request->input('status');
         $listing->update($formField);
         return redirect('/')->with('message', 'Your hosting offer was updated successfully'); // Back()
     }
@@ -105,14 +105,14 @@ class ListingsController extends Controller
         ])->with('reservations', $reservations);
     }
 
-    public function status(Request $request, $id, Reservations $reservations) //Reservations $reservations
+    public function status(Request $request, $id)
     {
-        $listing = Listing::find($id);
-        $listing['status'] = $request->input('status');
-        $listing->update();
-        $listingId = $listing->id;
+        $listingStatus = Listing::find($id);
+        $listingStatus['status'] = $request->input('status');
+        $listingStatus->update();
+        $listingId = $listingStatus->id;
         $reservationEmail = Reservations::where('listing_id', '=', $listingId)->first();
         Mail::to( $reservationEmail->user_email)->send(new ReservationStatus());   
-        return back();
+        return back()->with('message', 'Your changes has been saved');
     }
 }

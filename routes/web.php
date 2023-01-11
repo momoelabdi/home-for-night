@@ -42,7 +42,7 @@ Route::get('/listing/{listing}/edit', [ListingsController::class, 'edit'])->midd
 Route::put('/listings/{listing}', [ListingsController::class, 'update'])->middleware('auth');
 
 // update Status
-Route::put('/listings/{listing}', [ListingsController::class, 'status'])->middleware('auth');
+Route::put('/listings/{listing}/status', [ListingsController::class, 'status'])->middleware('auth');
 
 // delete item
 Route::delete('/listings/{listing}', [ListingsController::class, 'destroy'])->middleware('auth');
