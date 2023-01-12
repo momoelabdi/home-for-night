@@ -15,8 +15,8 @@
                 <a href="/listing/create">Experience Hosting</a>
                 <a href="/listings/manage">Mange</a>
                 <a href="/reservations/manage">Reservations</a>
-                <form method="GET" action="/logout">
-                    <button type="submit"><a>logout</a></button>
+                <form class="logout-form" method="GET" action="/logout">
+                    <input type="submit" value="Log out">
                 </form>
             @else
                 <a onclick="showSignIn()"> Sign up</a>
