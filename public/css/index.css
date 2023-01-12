@@ -18,6 +18,11 @@
     box-shadow: 4px 8px 8px 4px hsl(0deg 0% 0% / 0.38);
 }
 
+.house-cards {
+    border-radius: 10px;
+    padding: 10px;
+    
+}
 .grid-card a {
     text-decoration: none;
     color: black;
@@ -25,23 +30,22 @@
 
 .grid-card i {
     font-size: 15px;
-    color: grey;
+    color: rgb(211, 48, 232);
     letter-spacing: 10px;
 }
 
-.house-cards {
-    border-radius: 10px;
-    padding: 10px;
-}
+.house-cards h4 {
 
+    text-align-last: center;
+}
 .house-cards span {
-    color: grey;
+    color: rgb(37, 35, 35);
 }
 
-.grid-card:hover {
+/* .grid-card:hover {
     box-shadow: 8px 16px 16px 10px hsl(0deg 0% 0% / 0.38);
     transition: all;
-}
+} */
 
 .house-cards img {
     width: 100%;
@@ -53,7 +57,3 @@
     opacity: 1;
     cursor: pointer;
 }
-
-/* .house-cards img:hover {
-    filter: brightness(75%);
-} */
