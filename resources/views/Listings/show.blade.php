@@ -48,8 +48,7 @@
                  <Input type="hidden" name="listing_id" value="{{ $item->id }}">
                  <div class="reservation-form">
                      <label>Message</label>
-                     <textarea type="text" placeholder="Leave a message" name="message">
-                </textarea>
+                     <textarea type="text" placeholder="Leave a message" name="message"></textarea>
                      @error('message')
                          <p class="message"> {{ $message }}</p>
                      @enderror
