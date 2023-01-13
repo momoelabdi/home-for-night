@@ -44,6 +44,8 @@
     list-style-type: none;
     margin: 0;
     padding: 10px;
+    letter-spacing: 0.6px;
+    word-spacing: 0.5px;
 }
 
 ul li {
@@ -52,12 +54,11 @@ ul li {
 }
 
 .house-cards img {
+    object-fit: cover ;
+    vertical-align: bottom;
     width: 100%;
     border-radius: 6px;
     max-height: 200px;
-    object-fit: cover;
-    vertical-align: bottom;
-    transition: 1s;
     opacity: 1;
     cursor: pointer;
 }

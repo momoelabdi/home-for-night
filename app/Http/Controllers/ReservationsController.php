@@ -19,6 +19,8 @@ class ReservationsController extends Controller
             'start' => 'required|date|after:tomorrow',
             'end' => 'required|date|after:start',
             'message' => 'required',
+            'user_name' => 'required',
+            'user_email' => 'required',
         ]);
 
         $formField['user_id'] = auth()->id();
