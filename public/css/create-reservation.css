@@ -15,8 +15,7 @@
 .reservation-form label {
     color: #030303d8;
 }
-.reservation-form input,
-textarea {
+.reservation-form input, textarea{
     width: 100%;
     padding: 12px 20px;
     border-radius: 4px;
@@ -24,16 +23,12 @@ textarea {
     resize: none;
 }
 
-.reservation-form textarea,
+.reservation-form  textarea,
 input:focus {
     outline: none;
+    
 }
-.reservation-form textarea::placeholder{
-    font-style: italic;
-    /* overflow: initial; */
 
-
-}
 
 .reservation-form [type="submit"] {
     width: 100%;
@@ -55,8 +50,8 @@ input:focus {
 }
 
 @media screen and (max-width: 600px) {
-    .create-reservation  {
+    .create-reservation {
         margin-bottom: 15em;
         margin-right: 3%;
-    }  
+    }
 }

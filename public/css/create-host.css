@@ -50,7 +50,7 @@
 
 textarea {
     font-family: inherit;
-    /* font-size: inherit; */
+    font-size: inherit;
  }
  
 .hoster-form textarea, input:focus {

@@ -58,8 +58,8 @@
             <Input type="hidden" name="status" value="Panding...">
             <div class="hoster-form">
                 <label>Description</label>
-                <textarea type="text" placeholder="Description" name="description" > {{ old('description') }}
-                </textarea>
+                <textarea type="text" placeholder="Description" name="description" ></textarea>
+                
                 @error('description')
                     <p class="message"> {{ $message }}</p>
                 @enderror
