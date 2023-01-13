@@ -28,6 +28,13 @@ textarea {
 input:focus {
     outline: none;
 }
+.reservation-form textarea::placeholder{
+    font-style: italic;
+    /* overflow: initial; */
+
+
+}
+
 .reservation-form [type="submit"] {
     width: 100%;
     background-color: black;

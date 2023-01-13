@@ -2,6 +2,7 @@
     padding: 15px;
     padding-bottom: 10%;
     padding-top: 10%;
+    /* border: solid #347ab8 5px; */
 }
 
 .show-card > h2 {
@@ -11,32 +12,37 @@
     text-decoration: underline;
     padding-left: 5%;
 }
+
 .show-item {
+    box-shadow: 4px 8px 16px 9px rgba(0, 0, 0, 0.2);
     float: left;
-    width: 90%;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
     transition: 0.3s;
     border-radius: 15px 15px 25px 25px;
 }
-.show-item >
-h3 {
+.show-item > h3 {
     display: flex;
+    margin-top: 5%;
+    margin-left: 5%;
 }
 
 .show-item > h4 {
+    color: #545b61;
     display: flex;
-    padding: 15px;  /* should be set to 8 on medieum media */
-    color: rgb(21, 20, 20);
-    font-weight: 400;
+    margin: 20px; 
+    letter-spacing: 0.5px;
+    word-spacing: 0.8px;
+    font-weight: lighter;
+
 }
 .show-item img {
     float: right;
     width: 50%;
-    object-fit: cover;
-    max-height: 300px;
     border-radius: 0 15px 15px 0;
     opacity: 1;
-    cursor: pointer;
+    max-height: 300px;
+    object-fit: cover;
+    cursor: pointer; 
 }
 
 @media screen and (max-width: 600px) {
