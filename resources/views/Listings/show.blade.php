@@ -17,6 +17,7 @@
          <div class="create-reservation">
              <form method="POST" action="/reservations" enctype="multipart/form-data">
                  @csrf
+                 <h2>Let's Reserve it Now</h2>
                  <div class="reservation-form">
                      <label>Name</label>
                      <input type="text" name="user_name" placeholder="Full Name" {{-- value="{{ auth()->user()->name }}" --}}>
@@ -78,8 +79,7 @@
                  </div>
                  <div class="reservation-form">
                      <label>Message</label>
-                     <textarea type="text" placeholder="Leave a message">
-                </textarea>
+                     <textarea type="text" placeholder="Leave a message"></textarea>
                      <input type="button" onclick="showSignIn()" value="Reserve">
                  </div>
              </form>

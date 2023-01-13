@@ -2,7 +2,6 @@
     padding: 15px;
     padding-bottom: 10%;
     padding-top: 10%;
-    /* border: solid #347ab8 5px; */
 }
 
 .show-card > h2 {
@@ -29,11 +28,10 @@
 .show-item > h4 {
     color: #545b61;
     display: flex;
-    margin: 20px; 
+    margin: 20px;
     letter-spacing: 0.5px;
     word-spacing: 0.8px;
     font-weight: lighter;
-
 }
 .show-item img {
     float: right;
@@ -42,7 +40,7 @@
     opacity: 1;
     max-height: 300px;
     object-fit: cover;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
