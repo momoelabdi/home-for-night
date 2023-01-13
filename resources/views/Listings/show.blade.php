@@ -7,11 +7,9 @@
              <div class="show-item">
                  <img src="{{ $item->logo ? asset('storage/' . $item->logo) : asset('./images/home.jpg') }}"
                      alt="Home image" />
-                 {{-- <div class="host-info"> --}}
                      <h3> Get hosted by {{ $item->hoster }}</h3>
-                     <h3> {{ $item->description }}</h3>
-                     <h4>{{ $item->hoster }} offers {{ $item->tags }} for free</h4>
-                 {{-- </div> --}}
+                     <h4> {{ $item->description }}</h4>
+                     <h4>{{ $item->hoster }} propose {{ $item->tags }} for free</h4>
                 </div>
             </div>
         </div>
@@ -80,7 +78,7 @@
                          <label>Message</label>
                          <textarea type="text" placeholder="Leave a message">
                 </textarea>
-                         <input type="button" onclick="showLogin()" value="Reserve">
+                         <input type="button" onclick="showSignIn()" value="Reserve">
                      </div>
                  </form>
              </div>

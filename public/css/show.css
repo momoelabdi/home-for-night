@@ -4,13 +4,6 @@
     padding-top: 10%;
 }
 
-/* @media screen and (max-width: 600px) {
-.show-container {
-grid-template-columns: 1fr;
-
-}
-} */
-
 .show-card > h2 {
     padding-left: 5%;
 }
@@ -25,12 +18,17 @@ grid-template-columns: 1fr;
     transition: 0.3s;
     border-radius: 15px 15px 25px 25px;
 }
-.show-item h4,h3 {
-    padding: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
+.show-item >
+h3 {
+    display: flex;
 }
 
+.show-item > h4 {
+    display: flex;
+    padding: 15px;  /* should be set to 8 on medieum media */
+    color: rgb(21, 20, 20);
+    font-weight: 400;
+}
 .show-item img {
     float: right;
     width: 50%;
@@ -41,17 +39,14 @@ grid-template-columns: 1fr;
     cursor: pointer;
 }
 
-
 @media screen and (max-width: 600px) {
     .show-card > h2 {
         padding-top: 8%;
-    }  
+    }
 }
 
-
-
 @media screen and (max-width: 600px) {
-    .show-item  {
+    .show-item {
         margin-bottom: 15%;
         width: 100%;
     }
