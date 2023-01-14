@@ -1,8 +1,21 @@
 @extends('layout')
 
 @section('content')
+<div class="create-title">
+    <h3>Host someone</h3>
+    <h1>Travel, Learn and Share with people </h1>
+</div>
+<div class="create-images">
+    <img src="{{asset('./images/create-2.jpg')}}"
+    alt="Home image" />
+    <img src="{{asset('./images/create-4.jpg')}}"
+    alt="Home image" />
+    <img src="{{asset('./images/create-1.jpg')}}"
+    alt="Home image" />
+    <img src="{{asset('./images/some.jpg')}}"
+    alt="Home image" />    
+</div>
 <div class="create-form">
-        <h1> Join the community and connect with curious people </h1>
         <form method="POST" action="/listings" enctype="multipart/form-data">
             @csrf
             <div class="hoster-form">

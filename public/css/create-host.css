@@ -1,11 +1,10 @@
 .create-form {
     margin: auto;
     width: 50%;
-    padding:  10px;
+    padding: 16px;
     box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
     border-radius: 10px;
-    margin-top: 5%;
-    
+    margin-top: 15%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -13,10 +12,20 @@
         width: 90%;
         margin-bottom: 12%;
     }
-  }
+}
 
- 
-  .create-form h1 {
+.create-title {
+    padding-top: 10%;
+
+    /* text-align: center; */
+    border: solid #030303d8 5px;
+}
+
+.create-title h1 {
+    font-size: 80px;
+    color: burlywood;
+}
+/* .create-form h1 {
     font-size: 25px;
     text-align: center;
     animation: color-change 6s infinite;
@@ -27,7 +36,7 @@
     40% { color: rgb(242, 145, 49); }
     100% { color: rgba(64, 59, 5, 0.903); }
     
-  }
+  } */
 
 .hoster-form {
     border-radius: 5px;
@@ -39,8 +48,8 @@
     color: #030303d8;
 }
 
-.hoster-form  input, textarea
- {
+.hoster-form input,
+textarea {
     width: 100%;
     padding: 12px 20px;
     border-radius: 4px;
@@ -51,9 +60,10 @@
 textarea {
     font-family: inherit;
     font-size: inherit;
- }
- 
-.hoster-form textarea, input:focus {
+}
+
+.hoster-form textarea,
+input:focus {
     outline: none;
 }
 
@@ -68,7 +78,7 @@ textarea {
     cursor: pointer;
 }
 
-.hoster-form select{
+.hoster-form select {
     width: 100%;
     padding: 12px 20px;
     border-radius: 4px;
@@ -79,6 +89,37 @@ textarea {
 .hoster-form input[type="submit"]:hover {
     background-color: rgba(0, 0, 0, 0.698);
 }
+
+.create-images {
+    touch-action: pan-right;
+    border: solid rgb(232, 29, 124) 5px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    /* -webkit-overflow-scrolling: touch; */
+    /* aspect-ratio: 2/1; */
+}
+.create-images::-webkit-scrollbar {
+    display: none;
+    
+}
+
+
+.create-images img:hover {
+   
+    border: solid rgb(178, 209, 3)  10px;
+}
+
+.create-images img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 400px;
+    scroll-snap-type: x;
+}
+
 .message {
     color: red;
     padding-top: 20%;
