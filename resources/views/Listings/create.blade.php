@@ -6,10 +6,10 @@
         <h1>Travel Learn and Share with people </h1>
     </div>
     <section aria-label="Newest Photo">
-        <div class="carousel">
-            <button class="carousel-btn prev">&lsaquo;</button>
-            <button class="carousel-btn next">&rsaquo;</button>
-            <ul>
+        <div class="carousel" data-carousel>
+            <button class="carousel-btn prev" data-carousel-button="prev">&lsaquo;</button>
+            <button class="carousel-btn next" data-carousel-button="next">&rsaquo;</button>
+            <ul data-slides>
                 <li class="slide" data-active> <img src="{{ asset('./images/create-2.jpg') }}" alt="Home image" />
                 </li>
                 <li class="slide"> <img src="{{ asset('./images/create-4.jpg') }}" alt="Home image" />
@@ -91,8 +91,21 @@
 
 
 
-    <script>
+    <script defer >
+        const buttons = document.querySelectorAll("[data-carousel-button]");
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
 
-        const button = document.querySelector()
+                const offset = button.dataset.carouselButton === "next" ? 1 : -1
+                const slides = button.closest('[data-carousel]').querySelector('[data-slides]')
+                const activeSilde = slides.querySelector("[data-active]")
+                let newIndex = [...slides.children].indexOf(activeSilde) + offset
+                if (newIndex < 0) newIndex = slides.children.length - 1
+                if (newIndex >= slides.children.length) newIndex = 0
+                slides.children[newIndex].dataset.active = true
+                delete activeSilde.dataset.active
+
+            })
+        });
     </script>
 @endsection
