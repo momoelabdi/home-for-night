@@ -3,7 +3,7 @@
 @section('content')
 <div class="create-title">
     <h3>Host someone</h3>
-    <h1>Travel, Learn and Share with people </h1>
+    <h1>Travel Learn and Share with people </h1>
 </div>
 <div class="create-images">
     <img src="{{asset('./images/create-2.jpg')}}"
