@@ -3,7 +3,7 @@
 @section('content')
     <div class="create-title">
         <h3>Host someone</h3>
-        <h1>Travel Learn and Share with people </h1>
+        <h1>Earn money leading people on activities you love. </h1>
     </div>
     <section aria-label="Newest Photo">
         <div class="carousel" data-carousel>
@@ -12,9 +12,9 @@
             <ul data-slides>
                 <li class="slide" data-active> <img src="{{ asset('./images/create-2.jpg') }}" alt="Home image" />
                 </li>
-                <li class="slide"> <img src="{{ asset('./images/create-4.jpg') }}" alt="Home image" />
-                </li>
                 <li class="slide"> <img src="{{ asset('./images/create-1.jpg') }}" alt="Home image" />
+                <li class="slide"> <img src="{{ asset('./images/create-4.jpg') }}" alt="Home image" />
+                 </li>
                 </li>
                 <li class="slide"> <img src="{{ asset('./images/some.jpg') }}" alt="Home image" />
                 </li>
@@ -91,7 +91,7 @@
 
 
 
-    <script defer >
+    <script defer>
         const buttons = document.querySelectorAll("[data-carousel-button]");
         buttons.forEach(button => {
             button.addEventListener('click', () => {
