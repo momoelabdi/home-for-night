@@ -61,6 +61,7 @@
          <div class="create-reservation">
              <form method="POST" action="/reservations" enctype="multipart/form-data">
                  @csrf
+                 <h2>Let's Reserve it Now</h2>
                  <div class="reservation-form">
                      <label>Name</label>
                      <input type="text" placeholder="Full Name">
