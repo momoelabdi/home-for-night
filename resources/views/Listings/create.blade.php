@@ -14,13 +14,26 @@
                 </li>
                 <li class="slide"> <img src="{{ asset('./images/create-1.jpg') }}" alt="Home image" />
                 <li class="slide"> <img src="{{ asset('./images/create-4.jpg') }}" alt="Home image" />
-                 </li>
+                </li>
                 </li>
                 <li class="slide"> <img src="{{ asset('./images/some.jpg') }}" alt="Home image" />
                 </li>
             </ul>
         </div>
     </section>
+    <div class="testimonial">
+        <div class="testimonial-card">
+            <img src="{{ asset('./images/createA.jpg') }}" alt="Home image" />
+            <h2>What’s an experience?</h2>
+            <p>It’s an activity that goes beyond the typical tour or class, designed and led by locals all over the world.
+                Show
+                off your city, craft, cause, or culture by hosting an experience.</p>
+        </div>
+    </div>
+
+
+
+
     <div class="create-form">
         <form method="POST" action="/listings" enctype="multipart/form-data">
             @csrf
