@@ -1,13 +1,19 @@
 .create-form {
     margin: auto;
     width: 50%;
-    padding: 16px;
+    /* padding: 16px; */
     box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
     border-radius: 10px;
     margin-top: 15%;
-
-    background: rgb(4,4,4);
-    background: linear-gradient(0deg, rgba(4,4,4,1) 0%, rgba(0,0,0,1) 2%, rgba(0,0,0,1) 51%, rgba(255,255,255,1) 100%);
+    background: rgb(4, 4, 4);
+    background: linear-gradient(
+        0deg,
+        rgba(4, 4, 4, 1) 0%,
+        rgba(0, 0, 0, 1) 2%,
+        rgba(0, 0, 0, 1) 51%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    /* border: solid green 5px; */
 }
 
 @media only screen and (max-width: 600px) {
@@ -16,9 +22,6 @@
         margin-bottom: 12%;
     }
 }
-
-
-
 
 /* .create-form h1 {
     font-size: 25px;
@@ -183,8 +186,14 @@ input:focus {
     height: 100vh;
     /* padding: 10%; */
     /* border: solid rgb(235, 132, 6) 5px; */
-    background: rgb(4,4,4);
-    background: linear-gradient(0deg, rgba(4,4,4,1) 0%, rgba(0,0,0,1) 2%, rgba(0,0,0,1) 51%, rgba(255,255,255,1) 100%);
+    background: rgb(4, 4, 4);
+    background: linear-gradient(
+        0deg,
+        rgba(4, 4, 4, 1) 0%,
+        rgba(0, 0, 0, 1) 2%,
+        rgba(0, 0, 0, 1) 51%,
+        rgba(255, 255, 255, 1) 100%
+    );
 }
 
 .testimonial-card > img {
@@ -192,7 +201,6 @@ input:focus {
     float: left;
     object-fit: cover;
     margin: 5%;
-
 }
 
 .testimonial-card {
@@ -200,7 +208,8 @@ input:focus {
     /* border: solid #f00893d8 5px; */
     padding: 5%;
 }
-.testimonial-card h2, p {
+.testimonial-card h2,
+p {
     padding-top: 5%;
     color: aliceblue;
 
