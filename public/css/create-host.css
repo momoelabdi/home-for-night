@@ -5,6 +5,7 @@
     box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
     border-radius: 10px;
     margin-top: 15%;
+    /* background-image: url('/images/sun.jpg'); */
 }
 
 @media only screen and (max-width: 600px) {
@@ -14,15 +15,9 @@
     }
 }
 
-.create-title {
-    padding-top: 10%;
-    /* border: solid #030303d8 5px; */
-}
 
-.create-title h1 {
-    font-size: 80px;
-    color: burlywood;
-}
+
+
 /* .create-form h1 {
     font-size: 25px;
     text-align: center;
@@ -89,12 +84,19 @@ input:focus {
 }
 /* --------------------------------Photos Demo----------------------------------- */
 .carousel {
-    border: solid #e41b61d8 5px;
+    /* border: solid #e41b61d8 5px; */
     width: 100vw;
     height: 100vh;
     position: relative;
 }
+.create-title {
+    padding: 10%;
+}
 
+.create-title h1 {
+    font-size: 80px;
+    color: burlywood;
+}
 .carousel > ul {
     margin: 0;
     padding: 0;
@@ -175,8 +177,10 @@ input:focus {
 /* -----------------------------Testimonial---------------------------------- */
 
 .testimonial {
-    padding: 10%;
-    border: solid rgb(235, 132, 6) 5px;
+    width: 100vw;
+    height: 100vh;
+    /* padding: 10%; */
+    /* border: solid rgb(235, 132, 6) 5px; */
     background: rgb(4,4,4);
     background: linear-gradient(0deg, rgba(4,4,4,1) 0%, rgba(0,0,0,1) 2%, rgba(0,0,0,1) 51%, rgba(255,255,255,1) 100%);
 }
@@ -186,14 +190,17 @@ input:focus {
     float: left;
     object-fit: cover;
     margin: 5%;
+
 }
 
 .testimonial-card {
-    background-color: rgb(10, 210, 236);
-    border: solid #f00893d8 5px;
+    /* background-color: rgb(10, 210, 236); */
+    /* border: solid #f00893d8 5px; */
 }
 .testimonial-card h2, p {
+    padding-top: 5%;
+    color: aliceblue;
 
-    /* padding: 5%; */
+    letter-spacing: 1px;
     margin: 5%;
 }
