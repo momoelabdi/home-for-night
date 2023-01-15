@@ -5,7 +5,9 @@
     box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
     border-radius: 10px;
     margin-top: 15%;
-    /* background-image: url('/images/sun.jpg'); */
+
+    background: rgb(4,4,4);
+    background: linear-gradient(0deg, rgba(4,4,4,1) 0%, rgba(0,0,0,1) 2%, rgba(0,0,0,1) 51%, rgba(255,255,255,1) 100%);
 }
 
 @media only screen and (max-width: 600px) {
@@ -196,6 +198,7 @@ input:focus {
 .testimonial-card {
     /* background-color: rgb(10, 210, 236); */
     /* border: solid #f00893d8 5px; */
+    padding: 5%;
 }
 .testimonial-card h2, p {
     padding-top: 5%;
