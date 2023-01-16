@@ -169,7 +169,6 @@ input:focus {
 
 .testimonial {
     padding: 10%;
-
     background: rgb(4, 4, 4);
     background: linear-gradient(
         0deg,
@@ -188,7 +187,7 @@ input:focus {
 }
 
 .testimonial-card {
-    padding: 5%;
+    /* border: solid blueviolet 5px; */
     margin: 10%;
 }
 .testimonial-card h2,
@@ -196,7 +195,22 @@ p {
     display: flex;
     padding-top: 5%;
     color: aliceblue;
-
     letter-spacing: 1px;
+    word-spacing: 1px;
     margin: 5%;
+}
+
+@media only screen and (max-width: 800px) {
+    .testimonial-card {
+        width: 80%;
+    }
+    .testimonial-card h2,
+    p {
+        padding-top: 8%;
+    }
+    .testimonial-card img {
+        float: right;
+        width: 100%;
+        margin-bottom: 5%;
+    }
 }

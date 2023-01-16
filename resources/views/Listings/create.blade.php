@@ -32,7 +32,7 @@
         <div class="testimonial-card">
             <img src="{{ asset('./images/createX.jpg') }}" alt="Home image" />
             <h2>Show what you know</h2>
-            <p>IExperiences of every kind, like cooking, crafting, kayaking, and more. There’s no limit to what you can do.
+            <p>Experiences of every kind, like cooking, crafting, kayaking, and more. There’s no limit to what you can do.
                 Explore these featured categories.</p>
         </div>
     </div>
