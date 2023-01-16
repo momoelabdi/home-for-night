@@ -1,42 +1,27 @@
 .create-form {
-    /* box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38); */
-    background: rgb(4, 4, 4);
-    background: linear-gradient(
-        0deg,
-        rgba(4, 4, 4, 1) 0%,
-        rgba(0, 0, 0, 1) 2%,
-        rgba(0, 0, 0, 1) 51%,
-        rgba(255, 255, 255, 1) 100%
-    );
-    margin-bottom: 10%;
+    padding: 20%;
+    background-color: black ;
 }
 
 @media only screen and (max-width: 600px) {
     .create-form {
+        padding: 10%;
     }
 }
 
-/* .create-form h1 {
-    font-size: 25px;
-    text-align: center;
-    animation: color-change 6s infinite;
-  }
-  
-  @keyframes color-change {
-    10% { color: rgb(237, 201, 42); }
-    40% { color: rgb(242, 145, 49); }
-    100% { color: rgba(64, 59, 5, 0.903); }
-    
-  } */
 
 .hoster-form {
+    margin: 5%;
     border-radius: 5px;
     width: 100%;
     padding: 10px;
+    background-color: #3a8ff6;
 }
 
 .hoster-form label {
-    color: #030303d8;
+    color: white;
+    margin-left: 10px;
+    letter-spacing: 1px;
 }
 
 .hoster-form input,
@@ -59,14 +44,20 @@ input:focus {
 }
 
 .hoster-form input[type="submit"] {
+    font-size: inherit;
     width: 100%;
-    background-color: black;
+    background-color: rgb(229, 21, 191);
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+.hoster-form input[type="file"] {
+    font-size: inherit;
+    color: rgb(149, 145, 145);
+    background: white;
 }
 
 .hoster-form select {
@@ -159,6 +150,16 @@ input:focus {
     right: 1rem;
 }
 
+.lets-go-btn {
+    background-color: #fb07ca;
+    border-radius: 5px;
+    padding: 10px 25px;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    float: right;
+}
 .message {
     color: red;
     padding-top: 20%;
@@ -187,17 +188,23 @@ input:focus {
 }
 
 .testimonial-card {
-    /* border: solid blueviolet 5px; */
     margin: 10%;
+    overflow: hidden;
 }
-.testimonial-card h2,
-p {
+.testimonial-card h2 {
     display: flex;
     padding-top: 5%;
     color: aliceblue;
     letter-spacing: 1px;
     word-spacing: 1px;
     margin: 5%;
+}
+.testimonial-card p {
+    display: flex;
+    padding-top: 5%;
+    color: aliceblue;
+    letter-spacing: 1px;
+    word-spacing: 1px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -211,6 +218,6 @@ p {
     .testimonial-card img {
         float: right;
         width: 100%;
-        margin-bottom: 5%;
+
     }
 }
