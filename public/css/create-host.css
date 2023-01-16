@@ -187,8 +187,8 @@ input:focus {
 }
 
 .testimonial-card {
-    /* border: solid blueviolet 5px; */
     margin: 10%;
+    overflow: hidden;
 }
 .testimonial-card h2,
 p {
