@@ -4,6 +4,7 @@
     <div class="create-title">
         <h3>Host someone</h3>
         <h1>Earn money leading people on activities you love. </h1>
+        <a class="lets-go-btn" href="#create-form">Let's Go</a>
     </div>
     <section aria-label="Newest Photo">
         <div class="carousel" data-carousel>
@@ -22,6 +23,7 @@
         </div>
     </section>
     <div class="testimonial">
+        <a class="lets-go-btn" href="#create-form">Let's Go</a>
         <div class="testimonial-card">
             <img src="{{ asset('./images/createA.jpg') }}" alt="Home image" />
             <h2>What’s an experience?</h2>
@@ -35,12 +37,18 @@
             <p>Experiences of every kind, like cooking, crafting, kayaking, and more. There’s no limit to what you can do.
                 Explore these featured categories.</p>
         </div>
+        <div class="testimonial-card">
+            <img src="{{ asset('./images/createX.jpg') }}" alt="Home image" />
+            <h2>Show what you know</h2>
+            <p>Experiences of every kind, like cooking, crafting, kayaking, and more. There’s no limit to what you can do.
+                Explore these featured categories.</p>
+        </div>
     </div>
 
 
 
 
-    <div class="create-form">
+    <div class="create-form" id="create-form">
         <form method="POST" action="/listings" enctype="multipart/form-data">
             @csrf
             <div class="hoster-form">
