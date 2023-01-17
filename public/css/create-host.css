@@ -46,7 +46,7 @@ input:focus {
     text-decoration: none;
     font-size: inherit;
     width: 30%;
-    background-color: rgb(231, 243, 9);
+    background-color: rgba(205, 23, 214, 0.698);
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -54,6 +54,10 @@ input:focus {
     border-radius: 4px;
     text-align: center;
     float: right;
+}
+
+.cancel-btn:hover {
+    background-color: rgba(144, 7, 151, 0.698);
 }
 
 form > input[type="submit"] {
@@ -66,6 +70,9 @@ form > input[type="submit"] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+form > input[type="submit"]:hover {
+    background-color: rgb(232, 25, 87);
 }
 .hoster-form input[type="file"] {
     font-size: inherit;
@@ -81,17 +88,13 @@ form > input[type="submit"] {
     resize: none;
 }
 
-.hoster-form input[type="submit"]:hover {
-    background-color: rgba(0, 0, 0, 0.698);
-}
 
 .create-form > h1 {
-    /* margin-bottom: 15%; */
-    font-size: 40px;
-    color: burlywood;
-    display: inline-block;
-    /* border: solid violet 5px; */
+    font-size: 30px;
+    color: rgb(230, 164, 78);
+
 }
+
 /* --------------------------------Photos Demo----------------------------------- */
 .carousel {
     width: 100vw;
