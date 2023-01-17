@@ -1,6 +1,8 @@
 .create-form {
     padding: 20%;
-    background-color: black ;
+
+    /* overflow: hidden; */
+    /* opacity: 0.6; */
 }
 
 @media only screen and (max-width: 600px) {
@@ -9,13 +11,13 @@
     }
 }
 
-
 .hoster-form {
     margin: 5%;
     border-radius: 5px;
-    width: 100%;
+    /* width: 100%; */
     padding: 10px;
-    background-color: #3a8ff6;
+    background: #04000177;
+    opacity: 1;
 }
 
 .hoster-form label {
@@ -70,6 +72,14 @@ input:focus {
 
 .hoster-form input[type="submit"]:hover {
     background-color: rgba(0, 0, 0, 0.698);
+}
+
+.create-form > h1 {
+    /* margin-bottom: 15%; */
+    font-size: 40px;
+    color: burlywood;
+    display: inline-block;
+    /* border: solid violet 5px; */
 }
 /* --------------------------------Photos Demo----------------------------------- */
 .carousel {
@@ -151,7 +161,7 @@ input:focus {
 }
 
 .lets-go-btn {
-    background-color: #fb07ca;
+    background-color: #282628;
     border-radius: 5px;
     padding: 10px 25px;
     color: #f2f2f2;
@@ -160,9 +170,15 @@ input:focus {
     font-size: 16px;
     float: right;
 }
+
+.lets-go-btn:hover {
+    background-color: #000000;
+    opacity: 1;
+}
+
 .message {
     color: red;
-    padding-top: 20%;
+    /* padding-top: 20%; */
     text-align: center;
 }
 
@@ -218,6 +234,5 @@ input:focus {
     .testimonial-card img {
         float: right;
         width: 100%;
-
     }
 }

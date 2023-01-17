@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="create-title">
-        <h3>Host someone</h3>
+        <h3>Experience Hosting</h3>
         <h1>Earn money leading people on activities you love. </h1>
         <a class="lets-go-btn" href="#create-form">Let's Go</a>
     </div>
@@ -49,6 +49,7 @@
 
 
     <div class="create-form" id="create-form">
+        <h1 >Join a growing community of curious people</h1>
         <form method="POST" action="/listings" enctype="multipart/form-data">
             @csrf
             <div class="hoster-form">
