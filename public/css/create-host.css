@@ -1,8 +1,6 @@
 .create-form {
     padding: 20%;
-
-    /* overflow: hidden; */
-    /* opacity: 0.6; */
+    background-color: #001d3d;
 }
 
 @media only screen and (max-width: 600px) {
@@ -12,11 +10,10 @@
 }
 
 .hoster-form {
-    margin: 5%;
+    margin: 4%;
     border-radius: 5px;
-    /* width: 100%; */
     padding: 10px;
-    background: #04000177;
+    background-color: rgb(0, 0, 0);
     opacity: 1;
 }
 
@@ -45,16 +42,37 @@ input:focus {
     outline: none;
 }
 
-.hoster-form input[type="submit"] {
+.cancel-btn {
+    text-decoration: none;
     font-size: inherit;
-    width: 100%;
-    background-color: rgb(229, 21, 191);
+    width: 30%;
+    background-color: rgba(205, 23, 214, 0.698);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    float: right;
+}
+
+.cancel-btn:hover {
+    background-color: rgba(144, 7, 151, 0.698);
+}
+
+form > input[type="submit"] {
+    font-size: inherit;
+    width: 30%;
+    background-color: rgb(238, 51, 107);
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+form > input[type="submit"]:hover {
+    background-color: rgb(232, 25, 87);
 }
 .hoster-form input[type="file"] {
     font-size: inherit;
@@ -70,17 +88,13 @@ input:focus {
     resize: none;
 }
 
-.hoster-form input[type="submit"]:hover {
-    background-color: rgba(0, 0, 0, 0.698);
-}
 
 .create-form > h1 {
-    /* margin-bottom: 15%; */
-    font-size: 40px;
-    color: burlywood;
-    display: inline-block;
-    /* border: solid violet 5px; */
+    font-size: 30px;
+    color: rgb(230, 164, 78);
+
 }
+
 /* --------------------------------Photos Demo----------------------------------- */
 .carousel {
     width: 100vw;

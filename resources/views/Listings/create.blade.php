@@ -107,8 +107,9 @@
                 @error('description')
                     <p class="message"> {{ $message }}</p>
                 @enderror
-                <input type="submit" value="Submit">
             </div>
+            <input type="submit" value="Submit">
+            <a href="/" class="cancel-btn"> Cancel</a>
 
 
         </form>
