@@ -1,6 +1,8 @@
 .create-form {
+    
     padding: 20%;
-    background-color: #001d3d;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);      
 }
 
 @media only screen and (max-width: 600px) {
@@ -13,12 +15,12 @@
     margin: 4%;
     border-radius: 5px;
     padding: 10px;
-    background-color: rgb(0, 0, 0);
+    background-color: #ffff;
     opacity: 1;
 }
 
 .hoster-form label {
-    color: white;
+    color: rgb(1, 1, 1);
     margin-left: 10px;
     letter-spacing: 1px;
 }
@@ -46,6 +48,7 @@ input:focus {
     text-decoration: none;
     font-size: inherit;
     width: 30%;
+    left : 11rem;
     background-color: rgba(205, 23, 214, 0.698);
     color: white;
     padding: 14px 20px;
@@ -54,6 +57,7 @@ input:focus {
     border-radius: 4px;
     text-align: center;
     float: right;
+    margin-right: 4%;
 }
 
 .cancel-btn:hover {
@@ -70,6 +74,7 @@ form > input[type="submit"] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-left: 4%;
 }
 form > input[type="submit"]:hover {
     background-color: rgb(232, 25, 87);
@@ -80,17 +85,20 @@ form > input[type="submit"]:hover {
     background: white;
 }
 
-.hoster-form select {
+.hoster-form > select {
     width: 100%;
     padding: 12px 20px;
     border-radius: 4px;
     border: 1px solid #ccc;
     resize: none;
+     outline: none;
 }
 
 .create-form > h1 {
-    font-size: 30px;
-    color: rgb(230, 164, 78);
+    font-size: 52px;
+  background: -webkit-linear-gradient(rgb(220, 144, 237), rgb(179, 0, 250));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* --------------------------------Photos Demo----------------------------------- */
@@ -238,10 +246,17 @@ form > input[type="submit"]:hover {
 
 @media only screen and (max-width: 600px) {
     .create-title h1 {
-        font-size: 20px;
-        margin: 10%;
+        font-size: 30px;
+        margin: 0;
     }
     .create-title {
         padding-top: 20%;
+    }
+    .create-form h1 {
+        font-size: 25px;
+    }
+    .create-form {
+        padding: 3%;
+        margin-bottom:20% ;
     }
 }
