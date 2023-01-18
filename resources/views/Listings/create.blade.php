@@ -39,6 +39,9 @@
                     Explore these featured categories.</p>
             </div>
         </div>
+
+
+
         <div class="create-form" id="create-form">
             <h1>Join a growing community of curious people</h1>
             <form method="POST" action="/listings" enctype="multipart/form-data">
@@ -94,12 +97,15 @@
                 <div class="hoster-form">
                     <label>Description</label>
                     <textarea type="text" placeholder="Description" name="description"></textarea>
+
                     @error('description')
                         <p class="message"> {{ $message }}</p>
                     @enderror
                 </div>
                 <input type="submit" value="Submit">
                 <a href="/" class="cancel-btn"> Cancel</a>
+
+
             </form>
         </div>
     </div>

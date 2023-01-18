@@ -52,7 +52,7 @@
                             <Input type="hidden" name="status" value="Refused X">
                             <button class="refuse-btn" type="submit">Refuse</button>
                         </form>
-                        {{-- @else <h1 class="message">You have no reservation</h1> --}}
+                        @else <h1 class="message">You have no reservation</h1>
                         @endif
                         
                         @endforeach
