@@ -6,22 +6,14 @@
         <h1>Earn money leading people on activities you love. </h1>
         <a class="lets-go-btn" href="#create-form">Let's Go</a>
     </div>
-    <section aria-label="Newest Photo">
-        <div class="carousel" data-carousel>
-            <button class="carousel-btn prev" data-carousel-button="prev">&lsaquo;</button>
-            <button class="carousel-btn next" data-carousel-button="next">&rsaquo;</button>
-            <ul data-slides>
-                <li class="slide" data-active> <img src="{{ asset('./images/create-2.jpg') }}" alt="Home image" />
-                </li>
-                <li class="slide"> <img src="{{ asset('./images/create-1.jpg') }}" alt="Home image" />
-                <li class="slide"> <img src="{{ asset('./images/create-4.jpg') }}" alt="Home image" />
-                </li>
-                </li>
-                <li class="slide"> <img src="{{ asset('./images/some.jpg') }}" alt="Home image" />
-                </li>
-            </ul>
-        </div>
-    </section>
+    <div class="slideshow-container">
+        <img class="mySlides" src="{{ asset('./images/create-2.jpg') }}" alt="Home image" style="width: 100%" />
+        <img class="mySlides" src="{{ asset('./images/create-1.jpg') }}" alt="Home image" style="width: 100%" />
+        <img class="mySlides" src="{{ asset('./images/create-4.jpg') }}" alt="Home image" style="width: 100%" />
+        <button class="carousel-btn prev " onclick="plusDivs(-1)">&#10094;</button>
+        <button class="carousel-btn next" onclick="plusDivs(+1)">&#10095;</button>
+    </div>
+
     <div class="testimonial">
         <a class="lets-go-btn" href="#create-form">Let's Go</a>
         <div class="testimonial-card">
@@ -47,9 +39,8 @@
 
 
 
-
     <div class="create-form" id="create-form">
-        <h1 >Join a growing community of curious people</h1>
+        <h1>Join a growing community of curious people</h1>
         <form method="POST" action="/listings" enctype="multipart/form-data">
             @csrf
             <div class="hoster-form">
@@ -114,27 +105,27 @@
 
         </form>
     </div>
+    <script>
+        let slideIndex = 1;
+        showDivs(slideIndex);
 
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
 
-
-
-
-
-    <script defer>
-        const buttons = document.querySelectorAll("[data-carousel-button]");
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-
-                const offset = button.dataset.carouselButton === "next" ? 1 : -1
-                const slides = button.closest('[data-carousel]').querySelector('[data-slides]')
-                const activeSilde = slides.querySelector("[data-active]")
-                let newIndex = [...slides.children].indexOf(activeSilde) + offset
-                if (newIndex < 0) newIndex = slides.children.length - 1
-                if (newIndex >= slides.children.length) newIndex = 0
-                slides.children[newIndex].dataset.active = true
-                delete activeSilde.dataset.active
-
-            })
-        });
+        function showDivs(n) {
+            let i;
+            let x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
     </script>
 @endsection
