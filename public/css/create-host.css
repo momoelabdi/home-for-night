@@ -110,7 +110,7 @@ form > input[type="submit"]:hover {
     margin: auto;
 }
 
-/* .slideshow-container > button
+.carousel-btn
  {
     z-index: 1;
     background: none;
@@ -118,34 +118,25 @@ form > input[type="submit"]:hover {
     font-size: 3rem;
     top: 50%;
     position: relative;
-    transform: translateY(350%);
-    color: rgba(255, 255, 255, 0.5);
+    transform: translateY(20rem);
+    color: #ffff;
     cursor: pointer;
     border-radius: 0.25rem;
     padding: 0 0.5rem;
-    border: solid orange 10px;
-} */
+} 
 
-.carousel-btn:hover,
-.carousel-btn:focus {
+.carousel-btn:hover {
     color: white;
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.carousel-btn.prev {
-    float: left;
-    /* left: 1rem; */
-}
+.carousel-btn.prev {float: left;}
 
-.carousel-btn.next {
-    float: right;
-    /* right: 1rem; */
-}
+.carousel-btn.next {float: right;}
 
 /* -----------------------------Testimonial---------------------------------- */
-.create-title {
-    padding: 10%;
-}
+.create-title {padding: 10%;}
+
 
 .create-title h1 {
     font-size: 80px;
@@ -170,7 +161,6 @@ form > input[type="submit"]:hover {
 
 .message {
     color: red;
-    /* padding-top: 20%; */
     text-align: center;
 }
 
@@ -233,22 +223,25 @@ form > input[type="submit"]:hover {
     }
     .slideshow-container > img {
         max-width: 100%;
+        
     }
     .mySlides {
         width: 100%;
+        max-height: 200px;
+    }
+    .carousel-btn {
+        transform: translateY(8rem);
+        font-size: 1.5rem;
+
     }
 }
 
-
 @media only screen and (max-width: 600px) {
-    .create-title  h1 {
+    .create-title h1 {
         font-size: 20px;
         margin: 10%;
-        
-        
     }
     .create-title {
         padding-top: 20%;
-
     }
 }

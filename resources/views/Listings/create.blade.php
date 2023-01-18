@@ -16,7 +16,6 @@
         </div>
 
         <div class="testimonial">
-            <a class="lets-go-btn" href="#create-form">Let's Go</a>
             <div class="testimonial-card">
                 <img src="{{ asset('./images/createA.jpg') }}" alt="Home image" />
                 <h2>What’s an experience?</h2>
