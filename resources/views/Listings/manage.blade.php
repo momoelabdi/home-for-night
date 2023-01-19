@@ -1,7 +1,5 @@
 @extends('layout')
-
 @section('content')
-
     <div class="manage">
         <h2>Manage my hosting posts</h2>
         <table class="host-table">
@@ -54,14 +52,9 @@
                             <Input type="hidden" name="status" value="Refused X">
                             <button class="refuse-btn" type="submit">Refuse</button>
                         </form>
-                    @else
-                        @once
-                            <h3 class="message">You have no reservation for the moment...</h3>
-                        @endonce
                     @endif
                 @endforeach
             @endforeach
         </div>
     </div>
-
 @endsection
