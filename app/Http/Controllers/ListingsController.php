@@ -101,7 +101,7 @@ class ListingsController extends Controller
             'listings' => auth()
                 ->user()
                 ->listings()
-                ->get()
+                ->get(),
         ])->with('reservations', $reservations);
     }
 
@@ -112,7 +112,7 @@ class ListingsController extends Controller
         $listingStatus->update();
         $listingId = $listingStatus->id;
         $reservationEmail = Reservations::where('listing_id', '=', $listingId)->first();
-        Mail::to( $reservationEmail->user_email)->send(new ReservationStatus());   
+        Mail::to($reservationEmail->user_email)->send(new ReservationStatus());
         return back()->with('message', 'Your changes has been saved');
     }
 }
