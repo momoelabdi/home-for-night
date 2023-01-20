@@ -48,6 +48,7 @@
     if (loginErr) {
         showLogin();
     } else if (registerErr) {
+        hideLogin();
         showSignUp();
     }
 

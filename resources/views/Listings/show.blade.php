@@ -81,7 +81,7 @@
                  <div class="reservation-form">
                      <label>Message</label>
                      <textarea type="text" placeholder="Leave a message"></textarea>
-                     <input type="button" onclick="showSignIn()" value="Reserve">
+                     <input type="button" onclick="showLogin()" value="Reserve">
                  </div>
              </form>
          </div>
