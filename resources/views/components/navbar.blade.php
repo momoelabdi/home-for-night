@@ -19,7 +19,7 @@
                     <input type="submit" value="Log out">
                 </form>
             @else
-                <a onclick="showSignIn()"> Sign up</a>
+                <a onclick="showSignUp()"> Sign up</a>
                 <a onclick="showLogin()"> log in</a>
                 <a onclick="showSignIn()"> Experience Hosting</a>
             @endauth

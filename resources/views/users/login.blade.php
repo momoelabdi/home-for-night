@@ -3,7 +3,7 @@
         <span onclick="hideLogin()" class="close" title="Close Modal">&times;</span>
         @csrf
         <div class="imgcontainer">
-            {{-- <img src="./images/user.png" alt="Avatar" class="avatar"> --}}
+            <img src="{{ asset('./images/Non-profit logo.png') }}" alt="Avatar" class="main-logo">
         </div>
         <div class="form-container">
             <label>Your Email</label>
@@ -20,7 +20,7 @@
             <button type="button" onclick="getSignUp()">Sign up</button>
         </div>
         <div class="form-container">
-            <button id="login-btn" type="button" onclick="hideLogin()" class="cancelbtn">Cancel</button>
+            <button type="button" onclick="hideLogin()" class="cancelbtn">Cancel</button>
         </div>
     </form>
 </div>
@@ -33,18 +33,26 @@
     function hideLogin() {
         document.getElementById('login').style.display = 'none'
     }
-    if (document.getElementById('login-msg')!= null) {
+
+    function showSignUp() {
+        document.getElementById('register').style.display = 'block';
+    }
+
+    function hideSignUp() {
+        document.getElementById('register').style.display = 'none';
+    }
+
+    const loginErr = document.getElementById('login-msg') !== null;  
+    const registerErr = document.getElementById('register-msg') !== null;
+
+    if (loginErr) {
         showLogin();
-        hideSignIn();
+    } else if (registerErr) {
+        showSignUp();
     }
 
     function getSignUp() {
         document.getElementById('login').style.display = 'none';
         document.getElementById('register').style.display = 'block';
     }
-
-    
-
-
-   
 </script>
