@@ -17,7 +17,6 @@
     <div class="layout-container">
 
         <x-flash-messages />
-        {{-- @yield('login') --}}
         @yield('content')
     </div>
     <x-footer />
