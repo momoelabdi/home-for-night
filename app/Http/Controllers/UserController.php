@@ -8,8 +8,9 @@ use App\Models\User;
 class UserController extends Controller
 {
     public function create()
-    {
-        return view('users.register');
+    {   
+        // replaced register with model check in web.php && layout.blade.php
+        // return view('users.register');
     }
 
     public function store(Request $request)
