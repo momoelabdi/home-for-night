@@ -22,7 +22,7 @@
                     <form method="POST" action="/reservations/{{ $reserved->id }}">
                         @csrf
                         @method('DELETE')
-                        <button class="manage-btn" type="submit">Delete</button>
+                        <button class="delete-reservation-btn" type="submit">Delete</button>
                     </form>
                 </div>
             @endforeach
@@ -30,4 +30,17 @@
             <h3 class="message">No reservations Found!!</h3>
         @endunless
     </div>
+
+    <script>
+        const deleteReservationBtn = document.querySelectorAll('.delete-reservation-btn');
+        deleteReservationBtn.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (confirm('Are you sure you want to delete this reservation?')) {
+                    btn.parentElement.submit();
+                }
+            });
+        });
+
+    </script>
 @endsection
