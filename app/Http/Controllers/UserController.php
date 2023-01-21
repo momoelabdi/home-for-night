@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Models\User;
+use Socialite;
 class UserController extends Controller
 {
     public function create()
@@ -58,6 +59,35 @@ class UserController extends Controller
             return back()
                 ->withErrors(['email' => 'Invalid email or password'])
                 ->onlyInput('email');
+        }
+    }
+
+    public function redirect()
+    {
+        return Socialite::driver('google')->redirect('/');
+    }
+
+    public function callBackGoogle()
+    {
+
+        try {
+            $google_user = Socialite::driver('google')->user();
+            $user = User::where('google_id', $google_user->getId())->first();
+            if ($user) {
+                auth()->login($user);
+                return redirect('/')->with('message', 'You logged in');
+            } else {
+                $user = User::create([
+                    'name' => $google_user->getName(),
+                    'email' => $google_user->getEmail(),
+                    'google_id' => $google_user->getId(),
+                    'password' => bcrypt('123456789')
+                ]);
+                auth()->login($user);
+                return redirect('/')->with('message', 'You logged in');
+            }
+        } catch (\Throwable $th) {
+            dd("somthing went wrong !" .$th->getMessage());
         }
     }
 }
