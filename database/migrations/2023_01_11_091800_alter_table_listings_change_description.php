@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('listings', function (Blueprint $table) {
-            $table->longText('description')->change();
+            $table->longText('description')->change()->after('tags');
         });
     }
 
