@@ -14,6 +14,23 @@
 
 
 
+
+.google-btn {
+    text-decoration: none;
+    border:  solid rgb(41, 13, 223) 20px;
+    background-color: rgb(12, 27, 11);
+    color: #fff;
+    padding: 14px 20px;
+    border: none;
+    width: 100%;
+    font-size: inherit;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
 .modal-content {
     background-color: #fefefe;
     margin: 5px auto; /* 15% from the top and centered */
