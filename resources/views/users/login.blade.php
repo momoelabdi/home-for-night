@@ -16,12 +16,15 @@
             @error('password')
                 <p id="login-msg" class="message"> {{ $message }} </p>
             @enderror
-            <button  type="submit">Login</button>
+            <button type="submit">Login</button>
             <button type="button" onclick="getSignUp()">Sign up</button>
         </div>
         <div class="form-container">
             <button type="button" onclick="hideLogin()" class="cancelbtn">Cancel</button>
         </div>
+        <a href="{{ route('google-auth') }}" class="google btn">
+            <i class="fa fa-google fa-fw"></i> Login with Google+
+        </a>
     </form>
 </div>
 
@@ -42,7 +45,7 @@
         document.getElementById('register').style.display = 'none';
     }
 
-    const loginErr = document.getElementById('login-msg') !== null;  
+    const loginErr = document.getElementById('login-msg') !== null;
     const registerErr = document.getElementById('register-msg') !== null;
 
     if (loginErr) {

@@ -67,3 +67,8 @@ Route::get('/item/{listing}', [ListingsController::class, 'show']);
 
 //autenticate user
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
+Route::get('/auth/google', [UserController::class, 'redirect'])->name("google-auth");
+Route::get('/auth/google/call-back', [UserController::class, 'callBackGoogle']);
+
+
