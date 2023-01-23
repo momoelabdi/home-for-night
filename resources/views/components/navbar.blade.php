@@ -21,7 +21,7 @@
             @else
                 <a onclick="showSignUp()"> Sign up</a>
                 <a onclick="showLogin()"> log in</a>
-                <a onclick="showSignIn()"> Experience Hosting</a>
+                <a onclick="showLogin()"> Experience Hosting</a>
             @endauth
         </div>
     </div>
