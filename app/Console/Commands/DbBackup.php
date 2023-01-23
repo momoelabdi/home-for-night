@@ -26,7 +26,7 @@ class DbBackup extends Command
      * @return int
      */
     public function handle()
-    {
+    {   // Create backup folder if not exists
         $filename = 'backup_' . strtotime(now()) . '.sql';
         $command = 'mysqldump --user=' . env('DB_USERNAME') . ' --password=' . env('DB_PASSWORD') . ' --host=' . env('DB_HOST') . ' ' . env('DB_DATABASE') . ' > ' . storage_path('app/backup/' . $filename);
         exec($command);
