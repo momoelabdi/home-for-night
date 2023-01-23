@@ -15,12 +15,10 @@
     @include('users.login')
     @include('users.register')
     <div class="layout-container">
-
         <x-flash-messages />
         @yield('content')
     </div>
     <x-footer />
-
 </body>
 <script src="//unpkg.com/alpinejs" defer></script>
 
