@@ -49,7 +49,7 @@
                         <form method="POST" action="/listings/{{ $listing->id }}/status">
                             @csrf
                             @method('PUT')
-                            <Input type="hidden" name="status" value="Refused X">
+                            <Input type="hidden" name="status" value="Refused">
                             <button class="refuse-btn" type="submit">Refuse</button>
                         </form>
                     @endif
@@ -57,4 +57,10 @@
             @endforeach
         </div>
     </div>
+    <script>
+        const reservationMsg = document.querySelector('.reservation-status');
+        if (reservationMsg.innerText ===  '') {
+            reservationMsg.innerHTML = '<h3 class="message">No Reservation Request Found!!</h3>';
+        }
+    </script>
 @endsection
