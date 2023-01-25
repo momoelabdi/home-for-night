@@ -29,10 +29,10 @@
             @endunless
         </table>
         <h2>Latests Requests for Hosting</h2>
-        <div class="reservation-status">
-            @foreach ($listings as $listing)
-                @foreach ($reservations as $reservation)
-                    @if ($listing->id === $reservation->listing_id && ($listing->user_id = auth()->id()))
+        @foreach ($listings as $listing)
+            @foreach ($reservations as $reservation)
+                @if ($listing->id === $reservation->listing_id && ($listing->user_id = auth()->id()))
+                    <div class="reservation-status">
                         <h2>{{ $reservation->user_name }} has requested your hosting at
                             {{ substr($reservation->created_at, 10) }}</h2>
                         <img src="{{ $listing->logo ? asset('storage/' . $listing->logo) : asset('./images/home.jpg') }}" />
@@ -52,14 +52,14 @@
                             <Input type="hidden" name="status" value="Refused">
                             <button class="refuse-btn" type="submit">Refuse</button>
                         </form>
-                    @endif
-                @endforeach
+                    </div>
+                @endif
             @endforeach
-        </div>
+        @endforeach
     </div>
     <script>
         const reservationMsg = document.querySelector('.reservation-status');
-        if (reservationMsg.innerText ===  '') {
+        if (reservationMsg.innerText === '') {
             reservationMsg.innerHTML = '<h3 class="message">No Reservation Request Found!!</h3>';
         }
     </script>
