@@ -7,6 +7,7 @@ use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 use App\Console\Commands\DbBackup;
 class Kernel extends ConsoleKernel
 {
+    protected $commands = ['App\Console\Commands\DbBackup'];
     /**
      * Define the application's command schedule.
      *
@@ -16,7 +17,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
-        $schedule->command('db:backup')->dailyAt('02:00');
+        $schedule->command('db:backup')->daily();
     }
 
     /**
@@ -24,6 +25,9 @@ class Kernel extends ConsoleKernel
      *
      * @return void
      */
-    protected  $commands = ["App\Console\Commands\DbBackup"];
-    
+    protected function commands()
+    {
+        $this->load(__DIR__ . '/Commands');
+
+    }
 }
