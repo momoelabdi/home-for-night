@@ -32,7 +32,7 @@ class HostReserved extends Mailable
     {
         return new Envelope(
             subject: 'Host Reserved',
-            from : 'home4night@gmail.com'
+            from : 'nighthomefor@gmail.com'
         );
     }
 

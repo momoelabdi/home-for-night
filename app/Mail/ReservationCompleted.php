@@ -32,7 +32,7 @@ class ReservationCompleted extends Mailable
     {
         return new Envelope(
             subject: 'Your home for night reservation',
-            from : 'home4night@gmail.com',
+            from : 'nighthomefor@gmail.com',
         );
     }
 
