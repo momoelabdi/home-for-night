@@ -1,7 +1,7 @@
 .register {
     display: none;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    position: fixed; 
+    z-index: 1; 
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -13,20 +13,19 @@
 }
 
 .register-container {
-    
     padding: 16px;
 }
 
 .regiter-content {
     background-color: #fefefe;
     margin: 5px auto; /* 15% from the top and centered */
-    border: 1px solid #888;
     width: 80%;
 }
 
 .register > form {
-    border: 10px solid #f1f1f1;
-    border-radius: 5px;
+    border: 10px solid #fff;
+    border-radius: 10px;
+    width: 40%;
 }
 
 .register  input {
