@@ -34,13 +34,13 @@
 .modal-content {
     background-color: #fefefe;
     margin: 5px auto; /* 15% from the top and centered */
-    border: 1px solid #888;
     width: 80%;
 } 
 
 .login > form {
-    border: 10px solid #f1f1f1;
-    border-radius: 5px;
+    border: 10px solid #fff;
+    border-radius: 10px;
+    width: 40%;
 }
 
 .login input[type=text], input[type=password]
