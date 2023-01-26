@@ -26,7 +26,7 @@
                 @endforeach
             @else
                 <h3 class="message">No hosting  Found!</h3>
-                <p>Share a hosting on Home for Night will help you to connect with more people. By doing so, you can increase your Knowledge and make you learn more about other cultures! <a href="/listing/create">Experience Hosting people from here</a></p>
+                <p>Share a hosting on Home for Night will let you to connect with more people. By doing so, you can increase your Knowledge and make you learn more about other cultures! <a href="/listing/create">Experience Hosting people from here</a></p>
             @endunless
         </table>
         <h2>Latests Requests for Hosting</h2>

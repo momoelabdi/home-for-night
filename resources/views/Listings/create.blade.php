@@ -38,7 +38,7 @@
             </div>
         </div>
         <div class="create-form" id="create-form">
-            <h1>Join a growing community of curious people</h1>
+            <h2>Join a growing community of curious people</h2>
             <form method="POST" action="/listings" enctype="multipart/form-data">
                 @csrf
                 <div class="hoster-form">

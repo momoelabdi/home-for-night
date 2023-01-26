@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="edit-form">
-        <h1>Improve my hosting</h1>
+        <h1>Edit my hosting</h1>
         <form method="POST" action="/listings/{{ $listing->id }}" enctype="multipart/form-data">
             @csrf
             @method('PUT')
@@ -54,8 +54,7 @@
             </div>
             <div class="hoster-form">
                 <label>Description</label>
-                <textarea type="text" name="description" placeholder="Description">{{ $listing->description }}
-                </textarea>
+                <textarea type="text" name="description" placeholder="Description">{{ $listing->description }}</textarea>
                 @error('description')
                     <p class="message"> {{ $message }}</p>
                 @enderror
