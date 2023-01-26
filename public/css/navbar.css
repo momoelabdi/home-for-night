@@ -7,7 +7,6 @@
     position: fixed;
     width: 100%;
     top: 0;
-    border-bottom: solid #ffff 0.5px;
 }
 
 .main-logo {
@@ -74,6 +73,7 @@
 .search-form {
     margin: auto;
     width: min(35%, 255px);
+    padding: 10px;
 }
 .search-form input[type="text"] {
     padding: 4px 12px;
@@ -97,7 +97,7 @@
     float: left;
     width: 20%;
     padding: 4px 12px;
-    background: rgb(211, 48, 232);
+    background: #f308f3;
     color: white;
     font-size: 17px;
     border: 1px solid grey;
@@ -106,7 +106,7 @@
     border-radius: 0px 50px 50px 0px;
 }
 
-.logout-form  > input[type=submit] {
+.logout-form > input[type="submit"] {
     width: 100%;
     background-color: white;
     color: inherit;
@@ -117,11 +117,15 @@
     cursor: pointer;
     font-size: inherit;
     text-align: left;
+}
 
-  }
-  
-  input[type=submit]:hover {
-    background-color:black;
+.logout-form > input[type="submit"]:hover {
+    background-color: black;
     color: white;
-  }
-  
+}
+
+@media screen and (max-width: 600px) {
+    .search-form {
+        width: 50%;
+    }
+}

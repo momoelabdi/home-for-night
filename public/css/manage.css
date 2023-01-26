@@ -34,7 +34,7 @@
 }
 
 .manage-btn {
-    background-color: #fb5607;
+    background-color: #000;
     border-radius: 5px;
     border: none;
     padding: 10px 25px;
@@ -46,7 +46,7 @@
 }
 
 .edit {
-    background-color: #343a40;
+    background-color: #f308f3;
 }
 .reservation-status {
     padding: 15px;
@@ -68,7 +68,7 @@ form > .refuse-btn {
     padding-top: 0;
 }
 .refuse-btn {
-    background-color: #fb075c;
+    background-color: #020101;
     border-radius: 5px;
     border: none;
     padding: 10px 25px;
@@ -77,7 +77,7 @@ form > .refuse-btn {
     font-size: 16px;
 }
 .confirm-btn {
-    background-color: #b207fb;
+    background-color: #f308f3;
     border-radius: 5px;
     border: none;
     padding: 10px 25px;
