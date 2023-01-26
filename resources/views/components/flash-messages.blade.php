@@ -1,8 +1,8 @@
 @if(session()->has('message'))
-<div x-data="{show: true}" x-init="setTimeout(() => show = false, 3000)" x-show="show"
+<div x-data="{show: true}" x-init="setTimeout(() => show = false, 3500)" x-show="show"
   class="flash-mesage">
-  <h3>
+  <p class="session-msg">
     {{session('message')}}
-  </h3>
+  </p>
 </div>
 @endif

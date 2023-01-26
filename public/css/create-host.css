@@ -6,6 +6,7 @@
         rgba(255, 255, 255, 1) 0%,
         rgba(0, 0, 0, 1) 100%
     );
+   
 }
 
 @media only screen and (max-width: 600px) {
@@ -20,6 +21,7 @@
     padding: 10px;
     background-color: #ffff;
     opacity: 1;
+    /* background-image: url('/images/kindel-media.jpg'); */
 }
 
 .hoster-form label {
@@ -97,9 +99,12 @@ form > input[type="submit"]:hover {
     outline: none;
 }
 
-.create-form > h1 {
-    font-size: 52px;
-    color: rgb(253, 0, 190);
+.create-form > h2 {
+    font-size: 34px;
+    color:#0aefff;
+    letter-spacing: 3px;
+
+
 }
 
 /* --------------------------------Photos Demo----------------------------------- */
