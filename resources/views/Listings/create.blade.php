@@ -4,44 +4,39 @@
     <div class="create-content">
         <div class="create-title">
             <h3>Experience Hosting</h3>
-            <h1>Earn money leading people on activities you love. </h1>
+            <h1>Tarvel Leran, Share and Repaet</h1>
             <a class="lets-go-btn" href="#create-form">Let's Go</a>
         </div>
         <div class="slideshow-container">
             <button class="carousel-btn prev " onclick="plusDivs(-1)">&#10094;</button>
             <button class="carousel-btn next" onclick="plusDivs(+1)">&#10095;</button>
-            <img class="mySlides" src="{{ asset('./images/create-2.jpg') }}" alt="Home image" style="width: 100%" />
-            <img class="mySlides" src="{{ asset('./images/create-1.jpg') }}" alt="Home image" style="width: 100%" />
-            <img class="mySlides" src="{{ asset('./images/create-4.jpg') }}" alt="Home image" style="width: 100%" />
+            <img class="mySlides" src="{{ asset('./images/pexels-min.jpg') }}" alt="Home image" style="width: 100%" />
+            <img class="mySlides" src="{{ asset('./images/ian-schneider.jpg') }}" alt="Home image" style="width: 100%" />
+            <img class="mySlides" src="{{ asset('./images/chang-duong.jpg') }}" alt="Home image" style="width: 100%" />
+            <img class="mySlides" src="{{ asset('./images/kindel-media.jpg') }}" alt="Home image" style="width: 100%" />
+            <img class="mySlides" src="{{ asset('./images/people.jpg') }}" alt="Home image" style="width: 100%" />
+            <img class="mySlides" src="{{ asset('./images/pexels-fauxels.jpg') }}" alt="Home image" style="width: 100%" />
+            <img class="mySlides" src="{{ asset('./images/timon-studler.jpg') }}" alt="Home image" style="width: 100%" />
         </div>
-
         <div class="testimonial">
             <div class="testimonial-card">
-                <img src="{{ asset('./images/createA.jpg') }}" alt="Home image" />
-                <h2>What’s an experience?</h2>
+                <img src="{{ asset('./images/hikes.jpg') }}" alt="Home image" />
+                <h2>Show what you know </h2>
+                <p> Lead a hike with your besties, or teach ethical fashion. Share awareness of your cause in a whole new
+                    way.</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="{{ asset('./images/pexel-serton.jpg') }}" alt="Home image" />
+                <h2>Do what you love</h2>
+                <p>Scout for street art or surf at sunset, share your passion and learn from others.. </p>
+            </div>
+            <div class="testimonial-card">
+                <img src="{{ asset('./images/createX.jpg') }}" alt="Home image" />
+                <h2> What’s an experience?</h2>
                 <p>It’s an activity that goes beyond the typical tour or class, designed and led by locals all over the
-                    world.
-                    Show
-                    off your city, craft, cause, or culture by hosting an experience.</p>
-            </div>
-            <div class="testimonial-card">
-                <img src="{{ asset('./images/createX.jpg') }}" alt="Home image" />
-                <h2>Show what you know</h2>
-                <p>Experiences of every kind, like cooking, crafting, kayaking, and more. There’s no limit to what you can
-                    do.
-                    Explore these featured categories.</p>
-            </div>
-            <div class="testimonial-card">
-                <img src="{{ asset('./images/createX.jpg') }}" alt="Home image" />
-                <h2>Show what you know</h2>
-                <p>Experiences of every kind, like cooking, crafting, kayaking, and more. There’s no limit to what you can
-                    do.
-                    Explore these featured categories.</p>
+                    world. Show off your city, craft, cause, or culture by hosting an experience.</p>
             </div>
         </div>
-
-
-
         <div class="create-form" id="create-form">
             <h1>Join a growing community of curious people</h1>
             <form method="POST" action="/listings" enctype="multipart/form-data">
@@ -104,8 +99,6 @@
                 </div>
                 <input type="submit" value="Submit">
                 <a href="/" class="cancel-btn"> Cancel</a>
-
-
             </form>
         </div>
     </div>
