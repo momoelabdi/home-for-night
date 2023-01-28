@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('hoster');
             $table->string('location');
             $table->string('email');
-            $table->longText('description')->change();
+            $table->longText('description');
             $table->timestamps();
         });
     }
