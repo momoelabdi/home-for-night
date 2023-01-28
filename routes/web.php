@@ -61,6 +61,7 @@ Route::post('/users', [UserController::class, 'store'])
 
 // Show single item
 Route::get('/item/{listing}', [ListingsController::class, 'show']);
+Route::fallback(function () {  abort(404);});
 
 // get login form. 'route  replaced with Model'
 // Route::get('/', [UserController::class, 'login']);
@@ -72,5 +73,4 @@ Route::get('/auth/google', [UserController::class, 'redirect'])->name("google-au
 
 Route::get('/auth/google/call-back', [UserController::class, 'callBackGoogle']);
 
-Route::fallback(function () {  abort(404);});
    
