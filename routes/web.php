@@ -72,7 +72,5 @@ Route::get('/auth/google', [UserController::class, 'redirect'])->name("google-au
 
 Route::get('/auth/google/call-back', [UserController::class, 'callBackGoogle']);
 
-
-Route::fallback(function () {
-    abort(404);
-});
+Route::fallback(function () {  abort(404);});
+   
