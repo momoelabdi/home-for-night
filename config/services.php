@@ -33,7 +33,7 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),         
         'client_secret' => env('GOOGLE_CLIENT_SECRET'), 
-        'redirect' => 'https://home-for-night.up.railway.app/google/call-back',
+        'redirect' => 'https://home-for-night.up.railway.app/google/auth/call-back',
     ],
 
 ];
