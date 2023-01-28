@@ -61,6 +61,7 @@ Route::post('/users', [UserController::class, 'store'])
 
 // Show single item
 Route::get('/item/{listing}', [ListingsController::class, 'show']);
+
 Route::fallback(function () {  abort(404);});
 
 // get login form. 'route  replaced with Model'
