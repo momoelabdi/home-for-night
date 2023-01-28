@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('user_email');
             $table->string('user_name');
+            $table->longText('message');
             $table->foreignId('listing_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
