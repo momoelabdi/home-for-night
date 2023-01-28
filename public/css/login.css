@@ -95,13 +95,16 @@ span.psw {
     padding-top: 16px;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 500px) {
     span.psw {
         display: block;
         float: none;
     }
     .login .cancelbtn {
         width: 100%;
+    }
+    .login > form {
+        width: 80%;
     }
 }
 
