@@ -31,9 +31,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
     'google' => [
-        'client_id' => env('GOOGLE_CLIENT_ID'),         // Your GitHub Client ID
-        'client_secret' => env('GOOGLE_CLIENT_SECRET'), // Your GitHub Client Secret
-        'redirect' => 'https://home-for-night.up.railway.app/auth/google/call-back',
+        'client_id' => env('GOOGLE_CLIENT_ID'),         
+        'client_secret' => env('GOOGLE_CLIENT_SECRET'), 
+        'redirect' => 'https://home-for-night.up.railway.app/google/call-back',
     ],
 
 ];
