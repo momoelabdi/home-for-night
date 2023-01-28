@@ -23,14 +23,14 @@ class ListingsController extends Controller
 
     public function show(Listing $listing)
     {
-        return view('listings.show', [
+        return view('Listings.show', [
             'item' => $listing,
         ]);
     }
 
     public function create()
     {
-        return view('listings.create');
+        return view('Listings.create');
     }
 
     public function store(Request $request)
@@ -57,7 +57,7 @@ class ListingsController extends Controller
 
     public function edit(Listing $listing)
     {
-        return view('listings.edit', ['listing' => $listing]);
+        return view('Listings.edit', ['listing' => $listing]);
     }
 
     public function update(Request $request, Listing $listing)
@@ -97,7 +97,7 @@ class ListingsController extends Controller
     public function manage()
     {
         $reservations = Reservations::get();
-        return view('listings.manage', [
+        return view('Listings.manage', [
             'listings' => auth()
                 ->user()
                 ->listings()
