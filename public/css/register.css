@@ -27,6 +27,13 @@
     border-radius: 10px;
     width: 40%;
 }
+@media screen and (max-width: 600px) {
+    .register > form {
+        border: 10px solid #fff;
+        border-radius: 10px;
+        width: 80%;
+    }
+}
 
 .register  input {
     width: 100%;
