@@ -6,7 +6,7 @@
                 <a href="/item/{{ $item->id }}">
                     <div class="house-cards">
                         <img src="{{ $item->logo ? asset('storage/' . $item->logo) : asset('./images/home.jpg') }}"
-                            alt="Home image" />
+                            alt="image broken" />
                         <ul>
                             <li><i class="fa-thin fa fa-house"></i>{{ $item->title }}</li>
                             <li><i class="fa-thin fa fa-utensils"></i> {{ $item->tags }}</li>
