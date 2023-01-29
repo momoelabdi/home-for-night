@@ -48,7 +48,7 @@ class ListingsController extends Controller
         $formField['user_id'] = auth()->id();
         $formField['status'] = $request->input('status');
         if ($request->hasFile('logo')) {
-            $formField['logo'] = $request->file('logo')->store('logos', 'public');
+            $formField['logo'] = $request->file('logo')->store('logos', 'https://home-for-night.up.railway.app/public');
         }
 
         Listing::create($formField);
