@@ -64,7 +64,7 @@ class UserController extends Controller
 
     public function redirect()
     {
-        return Socialite::driver('google')->redirect('/');
+        return Socialite::driver('google')->redirect();
     }
 
     public function callBackGoogle()
