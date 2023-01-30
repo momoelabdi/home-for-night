@@ -5,7 +5,7 @@
              <h2>{{ $item->title }}. </h2>
              <p>{{ $item->location }}. </p>
              <div class="show-item">
-                 <img src="{{ $item->logo ? asset('storage/' . $item->logo) : asset('./images/home.jpg') }}"
+                 <img src="{{ $item->logo ? asset('http://home-for-night.up.railway.app/storage/' . $item->logo) : asset('./images/home.jpg') }}"
                      alt="Home image" />
                  <h3> Get hosted by {{ $item->hoster }}.</h3>
                  <h4> {{ $item->description }}.</h4>
