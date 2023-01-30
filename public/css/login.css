@@ -95,7 +95,7 @@ span.psw {
     padding-top: 16px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
     span.psw {
         display: block;
         float: none;
