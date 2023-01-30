@@ -1,16 +1,16 @@
 @extends('layout')
 @section('content')
     <div class="container">
-        @foreach ($listing as $item)
+        @foreach ($listing as $host)
             <div class="grid-card">
-                <a href="/item/{{ $item->id }}">
+                <a href="/host/{{ $host->id }}">
                     <div class="house-cards">
-                        <img src="{{ $item->logo ? asset('http://home-for-night.up.railway.app/storage/' . $item->logo) : asset('./images/home.jpg') }}"
+                        <img src="{{ $host->logo ? asset('http://home-for-night.up.railway.app/storage/' . $host->logo) : asset('./images/home.jpg') }}"
                             alt="image broken" />
                         <ul>
-                            <li><i class="fa-thin fa fa-house"></i>{{ $item->title }}</li>
-                            <li><i class="fa-thin fa fa-utensils"></i> {{ $item->tags }}</li>
-                            <li><span><i class="fa-thin fa fa-location-dot"></i> {{ $item->location }}</span></li>
+                            <li><i class="fa-thin fa fa-house"></i>{{ $host->title }}</li>
+                            <li><i class="fa-thin fa fa-utensils"></i> {{ $host->tags }}</li>
+                            <li><span><i class="fa-thin fa fa-location-dot"></i> {{ $host->location }}</span></li>
                         </ul>
                     </div>
                 </a>
