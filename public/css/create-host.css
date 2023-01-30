@@ -230,7 +230,8 @@ form > input[type="submit"]:hover {
         padding-top: 8%;
     }
     .testimonial-card img {
-        float: right;
+        display: block;
+        float: none;
         width: 100%;
     }
 }
