@@ -43,13 +43,13 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
     .show-card > h2 {
         padding-top: 8%;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
     .show-item {
         margin-bottom: 15%;
         width: 100%;

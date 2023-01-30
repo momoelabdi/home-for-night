@@ -62,7 +62,7 @@ h3 {
     margin: 3%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
     .reservation-container {
         padding: 8%;
         padding-top: 22%;
@@ -74,7 +74,7 @@ h3 {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
     .reserved {
         margin-bottom: 15%;
         width: 100%;

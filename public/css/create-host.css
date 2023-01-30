@@ -9,7 +9,7 @@
    
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
     .create-form {
         padding: 10%;
     }
@@ -221,7 +221,7 @@ form > input[type="submit"]:hover {
     word-spacing: 1px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 400px) {
     .testimonial-card {
         width: 80%;
     }
@@ -234,7 +234,7 @@ form > input[type="submit"]:hover {
         width: 100%;
     }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
     .slideshow-container {
         max-width: 100%;
         margin: 10%;
@@ -252,7 +252,7 @@ form > input[type="submit"]:hover {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
     .create-title h1 {
         font-size: 30px;
         margin: 0;

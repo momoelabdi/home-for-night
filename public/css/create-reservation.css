@@ -67,7 +67,7 @@ background-color: rgb(227, 81, 166);
     font-size: inherit;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
     .create-reservation {
         margin-bottom: 15em;
         margin-right: 3%;
