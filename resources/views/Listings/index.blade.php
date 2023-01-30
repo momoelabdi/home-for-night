@@ -6,7 +6,7 @@
                 <a href="/host/{{ $host->id }}">
                     <div class="house-cards">
                         <img src="{{ $host->logo ? asset('http://home-for-night.up.railway.app/storage/' . $host->logo) : asset('./images/home.jpg') }}"
-                            alt="image broken" />
+                            alt="image broken" /> 
                         <ul>
                             <li><i class="fa-thin fa fa-house"></i>{{ $host->title }}</li>
                             <li><i class="fa-thin fa fa-utensils"></i> {{ $host->tags }}</li>
