@@ -60,7 +60,7 @@ Route::post('/users', [UserController::class, 'store'])
     ->middleware();
 
 // Show single item
-Route::get('/item/{listing}', [ListingsController::class, 'show']);
+Route::get('/host/{listing}', [ListingsController::class, 'show']);
 
 Route::fallback(function () {  abort(404);});
 
