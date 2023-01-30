@@ -20,14 +20,14 @@
                  <h2>Let's Reserve it Now</h2>
                  <div class="reservation-form">
                      <label>Name</label>
-                     <input type="text" name="user_name" placeholder="Full Name" {{-- value="{{ auth()->user()->name }}" --}}>
+                     <input type="text" name="user_name" placeholder="Full Name" >
                      @error('user_name')
                          <p class="message"> {{ $message }}</p>
                      @enderror
                  </div>
                  <div class="reservation-form">
                      <label> Email </label>
-                     <input type="email" name="user_email" placeholder="Email" {{-- value="{{ auth()->user()->email }}" --}}>
+                     <input type="email" name="user_email" placeholder="Email">
                      @error('user_email')
                          <p class="message"> {{ $message }}</p>
                      @enderror
