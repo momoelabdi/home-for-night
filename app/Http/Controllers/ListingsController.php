@@ -24,7 +24,7 @@ class ListingsController extends Controller
     public function show(Listing $listing)
     {
         return view('Listings.show', [
-            'item' => $listing,
+            'host' => $listing,
         ]);
     }
 

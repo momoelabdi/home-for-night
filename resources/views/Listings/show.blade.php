@@ -2,14 +2,14 @@
  @section('content')
      <div class="show-container">
          <div class="show-card">
-             <h2>{{ $item->title }}. </h2>
-             <p>{{ $item->location }}. </p>
+             <h2>{{ $host->title }}. </h2>
+             <p>{{ $host->location }}. </p>
              <div class="show-item">
-                 <img src="{{ $item->logo ? asset('http://home-for-night.up.railway.app/storage/' . $item->logo) : asset('./images/home.jpg') }}"
+                 <img src="{{ $host->logo ? asset('http://home-for-night.up.railway.app/storage/' . $host->logo) : asset('./images/home.jpg') }}"
                      alt="Home image" />
-                 <h3> Get hosted by {{ $item->hoster }}.</h3>
-                 <h4> {{ $item->description }}.</h4>
-                 <h4>{{ $item->hoster }} propose {{ $item->tags }} for free.</h4>
+                 <h3> Get hosted by {{ $host->hoster }}.</h3>
+                 <h4> {{ $host->description }}.</h4>
+                 <h4>{{ $host->hoster }} propose {{ $host->tags }} for free.</h4>
              </div>
          </div>
      </div>
@@ -46,7 +46,7 @@
                          <p class="message"> {{ $message }}</p>
                      @enderror
                  </div>
-                 <Input type="hidden" name="listing_id" value="{{ $item->id }}">
+                 <Input type="hidden" name="listing_id" value="{{ $host->id }}">
                  <div class="reservation-form">
                      <label>Message</label>
                      <textarea type="text" placeholder="Leave a message" name="message"></textarea>
