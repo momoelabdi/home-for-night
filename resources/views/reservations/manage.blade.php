@@ -27,7 +27,7 @@
                 </div>
             @endforeach
         @else
-            <h3 class="message">No reservations Found!!</h3>
+            <h3 class="n-reservation">No reservations Found!!</h3>
         @endunless
     </div>
 
