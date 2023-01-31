@@ -7,7 +7,6 @@
              <div class="show-item">
                  <img src="{{ $host->logo ? asset('storage/' . $host->logo) : asset('./images/home.jpg') }}"
                      alt="Home image" />
-                     {{-- http://home-for-night.up.railway.app/ --}}
                  <h3> Get hosted by {{ $host->hoster }}.</h3>
                  <h4> {{ $host->description }}.</h4>
                  <h4>{{ $host->hoster }} propose {{ $host->tags }} for free.</h4>
