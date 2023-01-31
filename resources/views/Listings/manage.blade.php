@@ -68,7 +68,7 @@
     <script>
         const reservationMsg = document.querySelector('.recent-reservations');
         if (reservationMsg.innerText === '') {
-            reservationMsg.innerHTML = '<h3 class="message">No Reservation Request Found!!</h3>';
+            reservationMsg.innerHTML = '<h3 class="empty-rev">No Reservation Request Found!!</h3>';
 
         }
 

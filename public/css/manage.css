@@ -154,3 +154,11 @@ form > .refuse-btn {
     opacity: 1;
     cursor: pointer;
 }
+.empty-rev {
+    color: #d609d6;
+    padding: 15px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    letter-spacing: 0.8px;
+}
+

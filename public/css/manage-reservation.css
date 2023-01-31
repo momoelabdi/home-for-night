@@ -104,3 +104,10 @@ h3 {
 .status {
     color: #fb075c;
 }
+
+@media screen and (max-width: 400px) {
+    .reserved h2,
+    h3 {
+        margin: 5%;
+    }
+}
