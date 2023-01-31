@@ -1,14 +1,24 @@
 .create-reservation {
+    display: grid;
+    grid-auto-columns: 1fr;
+    border: #fff 10px solid;
+}
+
+.reservation-msg {
+    color: #ef0ca7d8;
+}
+.spc {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    grid-area: left;
+    padding: 10px;
     border-radius: 12px;
+    margin-bottom: 10em;
     margin-top: 10%;
     margin-right: 5%;
-    margin-bottom: 10em;
-    float: right;
 }
-.create-reservation h2{
+.create-reservation h2 {
     text-align: center;
-    color:  rgb(203, 10, 123);
+    color: rgb(203, 10, 123);
 }
 .reservation-form {
     border-radius: 5px;
@@ -58,7 +68,7 @@ input:focus {
 }
 
 .reservation-form input[type="submit"]:hover {
-background-color: rgb(227, 81, 166);
+    background-color: rgb(227, 81, 166);
 }
 
 .reservation-form input[type="date"] {
@@ -67,8 +77,11 @@ background-color: rgb(227, 81, 166);
 }
 
 @media screen and (max-width: 400px) {
-    .create-reservation {
+    .spc {
+        grid-area: initial;
         margin-bottom: 15em;
-        margin-right: 3%;
+        margin-right: 0%;
+        margin-left: 0%;
+        float: none;
     }
 }
