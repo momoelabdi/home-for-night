@@ -92,9 +92,9 @@ h3 {
     .delete-reservation-btn {
         margin: 5%;
     }
-    .reserved h2,
+    .reserved > h2,
     h3 {
-        /* margin: 5%; */
+        margin: 5%;
     }
 }
 
@@ -106,10 +106,10 @@ h3 {
 @media screen and (max-width: 400px) {
     .reserved img {
         border-radius: 10px 10px 0 0;
-        float: none !important;
-        display: block !important;
+        display: block;
         width: 100%;
         margin-bottom: 10%;
+        float: none;
     }
 }
 

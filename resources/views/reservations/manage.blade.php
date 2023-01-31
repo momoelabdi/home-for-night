@@ -7,7 +7,7 @@
             @foreach ($reservations as $reserved)
                 <div class="reserved">
                     @foreach ($listings as $listing)
-                        <a href="/item/{{ $listing->id }}">
+                        <a href="/host/{{ $listing->id }}">
                             @if ($reserved->listing_id == $listing->id)
                                 <img
                                     src="{{ $listing->logo ? asset('storage/' . $listing->logo) : asset('./images/home.jpg') }}" />
