@@ -6,6 +6,65 @@
     padding-top: 10%;
 }
 
+.manage > .manage-msg {
+    padding: 25px 25px;
+    max-width: 60%;
+}
+.manage-msg {
+    padding: 15px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    box-shadow: 4px 8px 8px 4px hsl(0deg 0% 0% / 0.38);
+    border-radius: 10px;
+    letter-spacing: 0.8px;
+}
+
+.manage-msg > h3 {
+    color: #d609d6;
+    padding-top: 0;
+}
+.manage-msg > p {
+    color: #020101;
+    padding-top: 0;
+}
+
+.manage-msg > a {
+    background-color: #f308f3;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 25px;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    margin: 5%;
+}
+
+.manage-msg > a:hover {
+    background-color: #9d089d;
+    color: #f2f2f2;
+}
+
+@media screen and (max-width: 400px) {
+    .manage > .manage-msg {
+        max-width: 100%;
+        align-items: center;
+    }
+    .manage-msg {
+        width: 100%;
+        padding: 15px;
+        box-shadow: 4px 8px 8px 4px hsl(0deg 0% 0% / 0.38);
+        border-radius: 10px;
+        letter-spacing: 1px;
+    }
+    .manage-msg > a {
+        display: block;
+        width: 60%;
+        margin: 8%;
+    }
+}
+
 .host-table {
     border-collapse: collapse;
     width: 100%;
@@ -95,3 +154,11 @@ form > .refuse-btn {
     opacity: 1;
     cursor: pointer;
 }
+.empty-rev {
+    color: #d609d6;
+    padding: 15px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    letter-spacing: 0.8px;
+}
+

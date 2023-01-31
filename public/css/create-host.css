@@ -178,8 +178,7 @@ form > input[type="submit"]:hover {
 }
 
 .message {
-    color: red;
-    text-align: center;
+    color: #f308f3;
 }
 
 .testimonial {

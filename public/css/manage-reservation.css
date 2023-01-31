@@ -81,7 +81,8 @@ h3 {
     }
     .reserved img {
         border-radius: 10px 10px 0 0;
-        float: right;
+        float: none;
+        display: block;
         width: 100%;
         margin-bottom: 10%;
     }
@@ -102,4 +103,11 @@ h3 {
 
 .status {
     color: #fb075c;
+}
+
+@media screen and (max-width: 400px) {
+    .reserved h2,
+    h3 {
+        margin: 5%;
+    }
 }
